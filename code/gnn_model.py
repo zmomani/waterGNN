@@ -25,14 +25,16 @@ class ChebConv(torch.nn.Module):
 
     def forward(self, x, lap):                       # x: [batch, nodes, channels]
         b, n, c = x.shape
-        t0 = x.permute(1, 0, 2).reshape(n, b * c)
-        terms = [t0]
-        if self.order > 0:
-            terms.append(torch.sparse.mm(lap, t0))
-        for _ in range(2, self.order + 1):
-            terms.append(2 * torch.sparse.mm(lap, terms[-1]) - terms[-2])
-        h = torch.stack(terms, dim=-1).reshape(n, b, c * (self.order + 1)).permute(1, 0, 2)
-        return self.lin(h)
+        k1 = self.order + 1
+        w = self.lin.weight                           # [out, c * (order + 1)], term k of channel j at j * k1 + k
+        t_prev = None
+        t = x.permute(1, 0, 2).reshape(n, b * c)
+        out = t.reshape(n, b, c) @ w[:, 0::k1].T
+        for k in range(1, k1):                        # one Chebyshev term at a time keeps memory low
+            t_next = torch.sparse.mm(lap, t) if k == 1 else 2 * torch.sparse.mm(lap, t) - t_prev
+            t_prev, t = t, t_next
+            out = out + t.reshape(n, b, c) @ w[:, k::k1].T
+        return (out + self.lin.bias).permute(1, 0, 2)
 
 
 class Reconstructor(torch.nn.Module):

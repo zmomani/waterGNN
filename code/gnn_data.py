@@ -68,5 +68,20 @@ def node_features(run, mu=None, sd=None):
     return x
 
 
+# Three fixed groups of 11 sensors. To obtain the expected reading of a sensor, its
+# group is hidden and the model estimates it from the other 22 sensors. Groups are
+# interleaved along the west-east axis so that every hidden sensor has neighbours left.
+_order = np.argsort(XY[S_IDX, 0])
+GROUPS = [np.sort(_order[i::3]) for i in range(3)]          # positions within SENSORS
+
+
+def hide(x, group):
+    """Remove the readings and sensor flags of one group from a feature array."""
+    x = x.clone() if hasattr(x, "clone") else x.copy()
+    x[..., S_IDX[GROUPS[group]], 5] = 0.0
+    x[..., S_IDX[GROUPS[group]], 4] = 0.0
+    return x
+
+
 def batched_edges(batch):
     return torch.cat([EDGE_INDEX + i * N for i in range(batch)], dim=1)

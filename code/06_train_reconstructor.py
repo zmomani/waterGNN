@@ -20,6 +20,7 @@ ap.add_argument("--epochs", type=int, default=16)
 ap.add_argument("--samples", type=int, default=2500, help="random time steps drawn per epoch")
 ap.add_argument("--batch", type=int, default=32)
 ap.add_argument("--seed", type=int, default=0)
+ap.add_argument("--hide", action="store_true", help="hide one sensor group per sample (for detection)")
 args = ap.parse_args()
 torch.manual_seed(args.seed); rng = np.random.default_rng(args.seed)
 MODELS = ROOT / "models"; MODELS.mkdir(exist_ok=True)
@@ -41,7 +42,11 @@ SD_T = torch.tensor(SD)
 
 def batch_of(idx):
     sub = dict(time=run["time"][idx], sensors=run["sensors"][idx], level=run["level"][idx])
-    return torch.tensor(g.node_features(sub, MU, SD)), torch.tensor((run["truth"][idx] - MU) / SD)
+    x = torch.tensor(g.node_features(sub, MU, SD))
+    if args.hide:                                     # a different hidden group for each third of the batch
+        for k in range(3):
+            x[k::3] = g.hide(x[k::3], k)
+    return x, torch.tensor((run["truth"][idx] - MU) / SD)
 
 
 model = Reconstructor(g.EDGE_INDEX, g.N)
