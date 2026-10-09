@@ -1,0 +1,22 @@
+{
+ "regime": "intermittent",
+ "schedule": "S48",
+ "weeks": 12,
+ "days": 730,
+ "events": true,
+ "leaks": true,
+ "only_leak": null,
+ "name": "intermittent_S48_leaks",
+ "steps": 210240,
+ "start": "2018-01-01 00:00",
+ "dt": 300,
+ "supply_hours": [
+  24,
+  36,
+  48,
+  48,
+  60,
+  72
+ ],
+ "runtime_s": 1096
+}
