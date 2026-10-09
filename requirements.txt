@@ -6,4 +6,4 @@ pyyaml
 wntr
 epyt
 torch
-torch_geometric
+
