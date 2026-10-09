@@ -1,0 +1,22 @@
+{
+ "regime": "continuous",
+ "schedule": "S48",
+ "weeks": 12,
+ "days": 730,
+ "events": false,
+ "leaks": false,
+ "only_leak": null,
+ "name": "continuous_CWS_noleak",
+ "steps": 210240,
+ "start": "2018-01-01 00:00",
+ "dt": 300,
+ "supply_hours": [
+  168,
+  168,
+  168,
+  168,
+  168,
+  168
+ ],
+ "runtime_s": 1151
+}
