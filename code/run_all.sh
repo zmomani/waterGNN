@@ -3,6 +3,7 @@
 # (about 15 minutes per run; two runs at a time).
 cd "$(dirname "$0")"
 python3 01_build_network.py
+mkdir -p ../outputs
 D=730
 python3 02_simulate.py --regime continuous --days $D --leaks --events &
 python3 02_simulate.py --regime intermittent --schedule S48 --days $D --leaks --events &

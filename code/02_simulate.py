@@ -8,7 +8,7 @@ the script (i) opens or closes the rotation valves, (ii) updates each node's
 requested inflow from the state of its household tank, (iii) updates leak
 emitters, (iv) solves the pressure-dependent hydraulics and (v) updates tanks.
 """
-import argparse, json, time, zlib
+import argparse, json, shutil, time, zlib
 import numpy as np
 import pandas as pd
 import yaml
@@ -42,7 +42,10 @@ leaks = pd.read_csv(DATA / "leaks.csv", parse_dates=["start", "end", "peak"])
 dem = np.load(DATA / "demand.npz", allow_pickle=True)
 cfg = yaml.safe_load(open(DATA / "battledim_configuration.yaml"))
 
-d = epanet(str(DATA / "ltown_iws.inp"))
+# EPyT writes a temporary copy next to the file it loads, so each run loads its own
+# copy; otherwise two runs started together overwrite each other's temporary file.
+shutil.copy(DATA / "ltown_iws.inp", out / "network.inp")
+d = epanet(str(out / "network.inp"))
 d.setTimeSimulationDuration(n_steps * DT)
 d.setTimeHydraulicStep(DT)
 d.setDemandModel("PDA", P_MIN, P_REQ, P_EXP)
