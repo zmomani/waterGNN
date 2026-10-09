@@ -1,0 +1,9 @@
+run,steps,full_length,leaks_2018,leaks_2019,events,events_delivered,noise_sd_m,nan,supply_h_week,sensors
+continuous_CWS_leaks,210240,True,14,23,40,40,0.1,0,"[168.0, 168.0, 168.0, 168.0, 168.0, 168.0]",33
+continuous_CWS_noleak,210240,True,0,0,0,0,0.1,0,"[168.0, 168.0, 168.0, 168.0, 168.0, 168.0]",33
+intermittent_S24_leaks,210240,True,14,23,40,40,0.1,0,"[12.1, 18.1, 23.9, 23.9, 29.9, 36.0]",33
+intermittent_S24_noleak,210240,True,0,0,0,0,0.1,0,"[12.1, 18.1, 23.9, 23.9, 29.9, 36.0]",33
+intermittent_S48_leaks,210240,True,14,23,40,40,0.1,0,"[24.2, 36.1, 47.9, 47.9, 60.0, 71.9]",33
+intermittent_S48_noleak,210240,True,0,0,0,0,0.1,0,"[24.2, 36.1, 47.9, 47.9, 60.0, 71.9]",33
+intermittent_S72_leaks,210240,True,14,23,40,40,0.1,0,"[36.2, 54.0, 71.9, 72.1, 89.9, 108.0]",33
+intermittent_S72_noleak,210240,True,0,0,0,0,0.1,0,"[36.2, 54.0, 71.9, 72.1, 89.9, 108.0]",33
