@@ -1,0 +1,8 @@
+__pycache__/
+outputs/
+data/ltown_iws.inp
+data/nodes.csv
+data/valves.csv
+data/leaks.csv
+data/demand.npz
+*.npz

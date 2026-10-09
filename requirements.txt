@@ -1,0 +1,9 @@
+numpy
+pandas
+networkx
+matplotlib
+pyyaml
+wntr
+epyt
+torch
+torch_geometric
