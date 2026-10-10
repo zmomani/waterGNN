@@ -1,0 +1,98 @@
+{
+ "summary": {
+  "run": "intermittent_S48_noleak",
+  "epochs": 12,
+  "samples_per_epoch": 2500,
+  "aware": false,
+  "training_minutes": 11.2,
+  "parameters": 143233,
+  "gnn_mae_unmonitored_m": 0.668,
+  "gnn_p95_m": 2.529
+ },
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 0.7448735047021176,
+   "val_mae_unmonitored_m": 1.535874917351619,
+   "val_mae_sensors_m": 1.5045032379066403,
+   "minutes": 1.0330999612808227
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.39912307580958756,
+   "val_mae_unmonitored_m": 1.3079258720481066,
+   "val_mae_sensors_m": 1.3014233537455333,
+   "minutes": 1.9453202644983927
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.3227053278042273,
+   "val_mae_unmonitored_m": 1.2773893259885873,
+   "val_mae_sensors_m": 1.2804762690961058,
+   "minutes": 2.8817125360171
+  },
+  {
+   "epoch": 4,
+   "train_loss": 0.26453137397149007,
+   "val_mae_unmonitored_m": 0.9563153972830609,
+   "val_mae_sensors_m": 0.9250377534870513,
+   "minutes": 3.841814919312795
+  },
+  {
+   "epoch": 5,
+   "train_loss": 0.2798892613967748,
+   "val_mae_unmonitored_m": 0.9638863524921278,
+   "val_mae_sensors_m": 0.9309907314921404,
+   "minutes": 4.806632387638092
+  },
+  {
+   "epoch": 6,
+   "train_loss": 0.20638234178622342,
+   "val_mae_unmonitored_m": 0.8083056419140742,
+   "val_mae_sensors_m": 0.7907539494733158,
+   "minutes": 5.776878623167674
+  },
+  {
+   "epoch": 7,
+   "train_loss": 0.1696903018619743,
+   "val_mae_unmonitored_m": 0.7579990639230574,
+   "val_mae_sensors_m": 0.7263984406308811,
+   "minutes": 6.660066322485606
+  },
+  {
+   "epoch": 8,
+   "train_loss": 0.15739600353151698,
+   "val_mae_unmonitored_m": 0.713018540760866,
+   "val_mae_sensors_m": 0.678320583233481,
+   "minutes": 7.584703656037648
+  },
+  {
+   "epoch": 9,
+   "train_loss": 0.1533863413010506,
+   "val_mae_unmonitored_m": 0.7135915192637977,
+   "val_mae_sensors_m": 0.6983546190242973,
+   "minutes": 8.513846405347188
+  },
+  {
+   "epoch": 10,
+   "train_loss": 0.1337431443142964,
+   "val_mae_unmonitored_m": 0.6686765184744098,
+   "val_mae_sensors_m": 0.6531838585705039,
+   "minutes": 9.412659112612406
+  },
+  {
+   "epoch": 11,
+   "train_loss": 0.13194074099545444,
+   "val_mae_unmonitored_m": 0.6684690480577644,
+   "val_mae_sensors_m": 0.6623844479737346,
+   "minutes": 10.317452549934387
+  },
+  {
+   "epoch": 12,
+   "train_loss": 0.12643968179966913,
+   "val_mae_unmonitored_m": 0.6684883443673474,
+   "val_mae_sensors_m": 0.6577619211181038,
+   "minutes": 11.226383900642395
+  }
+ ]
+}

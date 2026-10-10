@@ -32,6 +32,11 @@ STATIC = np.column_stack([_elev / 100.0, _type, _flag]).astype(np.float32)      
 TANK = IDX["T1"]
 
 
+_nd = pd.read_csv(DATA / "nodes.csv").set_index("node")
+SECTOR = np.array([int(_nd.sector[n]) if n in _nd.index else 0 for n in NODES])
+ALWAYS = np.array([(n not in _nd.index) or (_nd.role[n] == "transmission") for n in NODES])   # mains, sources
+
+
 def load_run(name, year, every=1):
     """Sensor readings (with noise), exact pressure at every node, and timestamps."""
     sc = pd.read_csv(OUT / name / "scada.csv.gz", index_col=0, parse_dates=True).loc[str(year)].iloc[::every]
@@ -40,8 +45,16 @@ def load_run(name, year, every=1):
     names = list(z["nodes"]); col = [names.index(n) for n in NODES if n in names]
     truth = np.zeros((len(k), N), np.float32)
     truth[:, [IDX[n] for n in NODES if n in names]] = z["pressure"][k][:, col]
-    state = z["state"][k]
-    return dict(time=sc.index, sensors=sc[[f"P_{s}" for s in SENSORS]].to_numpy(np.float32),
+    full = z["state"]                                    # [steps, sectors], every 5 minutes
+    run_len = np.zeros(full.shape, np.float32)           # hours since the sector's supply window opened
+    for s in range(full.shape[1]):
+        on = full[:, s]
+        idx = np.arange(len(on)); last_off = np.maximum.accumulate(np.where(~on, idx, -1))
+        run_len[:, s] = np.where(on, (idx - last_off) * DT / 3600.0, 0.0)
+    state = full[k]
+    live = state[:, SECTOR] | ALWAYS                     # [T, N]: the pipe at the node is pressurised
+    since = np.where(ALWAYS, 0.0, run_len[k][:, SECTOR]).astype(np.float32)
+    return dict(live=live, since=since, time=sc.index, sensors=sc[[f"P_{s}" for s in SENSORS]].to_numpy(np.float32),
                 level=sc["L_T1"].to_numpy(np.float32), truth=truth, state=state,
                 flows=sc[[c for c in sc.columns if c.startswith("F_")]].to_numpy(np.float32))
 
@@ -52,19 +65,24 @@ def time_features(index):
     return np.column_stack([np.sin(h), np.cos(h), np.sin(d), np.cos(d)]).astype(np.float32)
 
 
-def node_features(run, mu=None, sd=None):
-    """[T, N, 11]: 5 static, sensor pressure, tank level, 4 time features.
-    With mu and sd (per-node mean and spread of leak-free pressure) the sensor
-    readings enter as deviations from normal, in units of that spread."""
+def node_features(run, mu=None, sd=None, aware=False):
+    """[T, N, 11 or 13]: 5 static, sensor pressure, tank level, 4 time features, and
+    for the supply-aware model the supply state and the hours since supply began.
+    A sensor on an unpressurised pipe is treated as missing: reading and flag are zero."""
     T = len(run["time"])
-    x = np.zeros((T, N, 11), np.float32)
+    x = np.zeros((T, N, 13 if aware else 11), np.float32)
     x[:, :, :5] = STATIC
+    ok = run["live"][:, S_IDX] if "live" in run else np.ones((T, len(S_IDX)), bool)
     if mu is None:
         x[:, S_IDX, 5] = run["sensors"] / P_SCALE
     else:
-        x[:, S_IDX, 5] = (run["sensors"] - mu[S_IDX]) / sd[S_IDX]
+        x[:, S_IDX, 5] = np.where(ok, (run["sensors"] - mu[S_IDX]) / sd[S_IDX], 0.0)
+    x[:, S_IDX, 4] = ok
     x[:, TANK, 6] = run["level"] / 4.0
-    x[:, :, 7:] = time_features(run["time"])[:, None, :]
+    x[:, :, 7:11] = time_features(run["time"])[:, None, :]
+    if aware:
+        x[:, :, 11] = run["live"]
+        x[:, :, 12] = np.clip(run["since"] / 24.0, 0, 3)
     return x
 
 
