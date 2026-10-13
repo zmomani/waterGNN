@@ -1,0 +1,230 @@
+{
+ "E3_blind": {
+  "GNN": {
+   "score": 47806.951,
+   "max_score": 220524.805,
+   "relative": 0.217,
+   "TP": 4.0,
+   "FP": 8.0,
+   "FN": 19.0,
+   "leaks": 23.0,
+   "TPR": 0.174,
+   "delay_h": 386.5,
+   "distance_m": 191.6
+  },
+  "Ridge": {
+   "score": 52436.734,
+   "max_score": 220524.805,
+   "relative": 0.238,
+   "TP": 9.0,
+   "FP": 21.0,
+   "FN": 14.0,
+   "leaks": 23.0,
+   "TPR": 0.391,
+   "delay_h": 749.2,
+   "distance_m": 217.5
+  },
+  "MLP": {
+   "score": -1500.0,
+   "max_score": 220524.805,
+   "relative": -0.007,
+   "TP": 0.0,
+   "FP": 3.0,
+   "FN": 23.0,
+   "leaks": 23.0,
+   "TPR": 0.0,
+   "delay_h": null,
+   "distance_m": null
+  }
+ },
+ "R_S24_blind": {
+  "GNN": {
+   "score": -6171.908,
+   "max_score": 160261.177,
+   "relative": -0.039,
+   "TP": 6.0,
+   "FP": 22.0,
+   "FN": 17.0,
+   "leaks": 23.0,
+   "TPR": 0.261,
+   "delay_h": 4487.0,
+   "distance_m": 220.7
+  },
+  "Ridge": {
+   "score": 29221.642,
+   "max_score": 160261.177,
+   "relative": 0.182,
+   "TP": 5.0,
+   "FP": 58.0,
+   "FN": 18.0,
+   "leaks": 23.0,
+   "TPR": 0.217,
+   "delay_h": 93.6,
+   "distance_m": 195.8
+  },
+  "MLP": {
+   "score": -41044.427,
+   "max_score": 160261.177,
+   "relative": -0.256,
+   "TP": 6.0,
+   "FP": 106.0,
+   "FN": 17.0,
+   "leaks": 23.0,
+   "TPR": 0.261,
+   "delay_h": 763.0,
+   "distance_m": 150.0
+  }
+ },
+ "R_S72_blind": {
+  "GNN": {
+   "score": 65511.553,
+   "max_score": 281282.68,
+   "relative": 0.233,
+   "TP": 4.0,
+   "FP": 49.0,
+   "FN": 19.0,
+   "leaks": 23.0,
+   "TPR": 0.174,
+   "delay_h": 460.7,
+   "distance_m": 178.3
+  },
+  "Ridge": {
+   "score": -77635.308,
+   "max_score": 281282.68,
+   "relative": -0.276,
+   "TP": 13.0,
+   "FP": 385.0,
+   "FN": 10.0,
+   "leaks": 23.0,
+   "TPR": 0.565,
+   "delay_h": 173.0,
+   "distance_m": 149.7
+  },
+  "MLP": {
+   "score": -74233.511,
+   "max_score": 281282.68,
+   "relative": -0.264,
+   "TP": 4.0,
+   "FP": 200.0,
+   "FN": 19.0,
+   "leaks": 23.0,
+   "TPR": 0.174,
+   "delay_h": 68.0,
+   "distance_m": 199.1
+  }
+ },
+ "R_drop6_S48": {
+  "GNN": {
+   "score": 54424.174,
+   "max_score": 220524.805,
+   "relative": 0.247,
+   "TP": 6.0,
+   "FP": 23.0,
+   "FN": 17.0,
+   "leaks": 23.0,
+   "TPR": 0.261,
+   "delay_h": 216.0,
+   "distance_m": 240.1
+  },
+  "Ridge": {
+   "score": -465808.127,
+   "max_score": 220524.805,
+   "relative": -2.112,
+   "TP": 18.0,
+   "FP": 1279.0,
+   "FN": 5.0,
+   "leaks": 23.0,
+   "TPR": 0.783,
+   "delay_h": 108.8,
+   "distance_m": 202.8
+  },
+  "MLP": {
+   "score": -3500.0,
+   "max_score": 220524.805,
+   "relative": -0.016,
+   "TP": 0.0,
+   "FP": 7.0,
+   "FN": 23.0,
+   "leaks": 23.0,
+   "TPR": 0.0,
+   "delay_h": null,
+   "distance_m": null
+  }
+ },
+ "E1": {
+  "GNN": {
+   "score": 221300.347,
+   "max_score": 545653.337,
+   "relative": 0.406,
+   "TP": 11.0,
+   "FP": 64.0,
+   "FN": 12.0,
+   "leaks": 23.0,
+   "TPR": 0.478,
+   "delay_h": 695.0,
+   "distance_m": 233.4
+  },
+  "Ridge": {
+   "score": 247936.726,
+   "max_score": 545653.337,
+   "relative": 0.454,
+   "TP": 17.0,
+   "FP": 126.0,
+   "FN": 6.0,
+   "leaks": 23.0,
+   "TPR": 0.739,
+   "delay_h": 669.7,
+   "distance_m": 240.3
+  },
+  "MLP": {
+   "score": 91017.685,
+   "max_score": 545653.337,
+   "relative": 0.167,
+   "TP": 4.0,
+   "FP": 15.0,
+   "FN": 19.0,
+   "leaks": 23.0,
+   "TPR": 0.174,
+   "delay_h": 611.5,
+   "distance_m": 153.0
+  }
+ },
+ "R_drop6_CWS": {
+  "GNN": {
+   "score": 194944.314,
+   "max_score": 545653.337,
+   "relative": 0.357,
+   "TP": 10.0,
+   "FP": 66.0,
+   "FN": 13.0,
+   "leaks": 23.0,
+   "TPR": 0.435,
+   "delay_h": 518.9,
+   "distance_m": 160.2
+  },
+  "Ridge": {
+   "score": 209212.965,
+   "max_score": 545653.337,
+   "relative": 0.383,
+   "TP": 11.0,
+   "FP": 83.0,
+   "FN": 12.0,
+   "leaks": 23.0,
+   "TPR": 0.478,
+   "delay_h": 1231.8,
+   "distance_m": 222.5
+  },
+  "MLP": {
+   "score": 74479.977,
+   "max_score": 545653.337,
+   "relative": 0.136,
+   "TP": 3.0,
+   "FP": 15.0,
+   "FN": 20.0,
+   "leaks": 23.0,
+   "TPR": 0.13,
+   "delay_h": 682.0,
+   "distance_m": 200.3
+  }
+ }
+}

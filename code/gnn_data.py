@@ -73,6 +73,8 @@ def node_features(run, mu=None, sd=None, aware=False):
     x = np.zeros((T, N, 13 if aware else 11), np.float32)
     x[:, :, :5] = STATIC
     ok = run["live"][:, S_IDX] if "live" in run else np.ones((T, len(S_IDX)), bool)
+    if "dead" in run:                                    # failed sensors: no reading at all
+        ok = ok & ~run["dead"]
     if mu is None:
         x[:, S_IDX, 5] = run["sensors"] / P_SCALE
     else:

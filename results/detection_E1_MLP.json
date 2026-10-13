@@ -1,0 +1,30 @@
+{
+ "MLP": {
+  "kappa": 0.5,
+  "h": 200,
+  "mute_radius_m": 600.0,
+  "calm_hours": 168,
+  "validation_2018": {
+   "score": 72279.307,
+   "max_score": 192486.893,
+   "relative": 0.376,
+   "TP": 4.0,
+   "FP": 16.0,
+   "FN": 10.0,
+   "leaks": 14.0,
+   "TPR": 0.286
+  },
+  "test_2019": {
+   "score": 91017.685,
+   "max_score": 545653.337,
+   "relative": 0.167,
+   "TP": 4.0,
+   "FP": 15.0,
+   "FN": 19.0,
+   "leaks": 23.0,
+   "TPR": 0.174
+  },
+  "median_hours_to_detection": 611.5,
+  "median_distance_m": 153.0
+ }
+}

@@ -54,5 +54,33 @@
   },
   "median_hours_to_detection": 87.5,
   "median_distance_m": 192.9
+ },
+ "MLP": {
+  "kappa": 0.5,
+  "h": 200,
+  "mute_radius_m": 600.0,
+  "calm_hours": 168,
+  "validation_2018": {
+   "score": 72279.307,
+   "max_score": 192486.893,
+   "relative": 0.376,
+   "TP": 4.0,
+   "FP": 16.0,
+   "FN": 10.0,
+   "leaks": 14.0,
+   "TPR": 0.286
+  },
+  "test_2019": {
+   "score": 40537.43,
+   "max_score": 220524.805,
+   "relative": 0.184,
+   "TP": 5.0,
+   "FP": 66.0,
+   "FN": 18.0,
+   "leaks": 23.0,
+   "TPR": 0.217
+  },
+  "median_hours_to_detection": 41.0,
+  "median_distance_m": 97.1
  }
 }

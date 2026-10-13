@@ -23,6 +23,9 @@ ap.add_argument("--tag", required=True); ap.add_argument("--name", required=True
 ap.add_argument("--ref", required=True); ap.add_argument("--val", required=True); ap.add_argument("--test", required=True)
 ap.add_argument("--aware", action="store_true")
 ap.add_argument("--every", type=int, default=12)
+ap.add_argument("--drop", type=int, default=0, help="number of sensors that have failed in the test year")
+ap.add_argument("--drop-seed", type=int, default=0)
+ap.add_argument("--only", default="", help="run one model only (GNN, Ridge or MLP) and add it to the existing results")
 args = ap.parse_args()
 MODELS, RES = ROOT / "models", ROOT / "results"
 norm = np.load(MODELS / f"norm_{args.tag}.npz"); MU, SD = norm["mu"], norm["sd"]
@@ -38,13 +41,17 @@ KEYS = ("time", "sensors", "level", "live", "since")
 
 
 def field_gnn(run):
-    cache = MODELS / f"field_{args.tag}_{run['name']}_{args.every}.npy"
+    sfx = f"_drop{args.drop}s{args.drop_seed}" if "dead" in run else ""
+    cache = MODELS / f"field_{args.tag}_{run['name']}_{args.every}{sfx}.npy"
     if cache.exists():
         return np.load(cache)
     out = np.zeros((len(run["time"]), len(J)), np.float32)
     with torch.no_grad():
         for i in range(0, len(run["time"]), 64):
-            x = torch.tensor(g.node_features({k: run[k][i:i + 64] for k in KEYS}, MU, SD, args.aware))
+            sub = {k: run[k][i:i + 64] for k in KEYS}
+            if "dead" in run:
+                sub["dead"] = run["dead"]
+            x = torch.tensor(g.node_features(sub, MU, SD, args.aware))
             out[i:i + 64] = (sum(model(g.hide(x, k)) for k in range(3)) / 3 - model(x))[:, J].numpy()
             if i % 1920 == 0:
                 print(run["name"], i, "/", len(run["time"]), flush=True)
@@ -53,7 +60,7 @@ def field_gnn(run):
 
 
 def flat(run, keep):
-    ok = run["live"][:, g.S_IDX]
+    ok = run["live"][:, g.S_IDX] & ~run.get("dead", np.zeros(33, bool))
     z = np.where(ok, (run["sensors"] - MU[g.S_IDX]) / SD[g.S_IDX], 0.0)
     cols = [z[:, keep], run["level"] / 4.0, g.time_features(run["time"]), np.ones(len(z))]
     if args.aware:                                   # the baseline's form of supply awareness
@@ -81,6 +88,45 @@ def field_ridge(run, maps):
     return (sum(flat(run, keep) @ W for keep, W in maps[1:]) / 3 - flat(run, maps[0][0]) @ maps[0][1]).astype(np.float32)
 
 
+def mlp_in(run, hidden=None):
+    ok = run["live"][:, g.S_IDX] & ~run.get("dead", np.zeros(33, bool))
+    if hidden is not None:
+        ok = ok & ~hidden
+    z = np.where(ok, (run["sensors"] - MU[g.S_IDX]) / SD[g.S_IDX], 0.0)
+    return torch.tensor(np.column_stack([z, ok, run["level"] / 4.0, g.time_features(run["time"])]).astype(np.float32))
+
+
+GROUP_MASK = np.zeros((3, 33), bool)
+for _k in range(3):
+    GROUP_MASK[_k, g.GROUPS[_k]] = True
+
+
+def fit_mlp(tr, epochs=300):
+    """Multilayer perceptron of about the size of the GNN, without the pipes; trained like the GNN,
+    with one sensor group hidden per sample."""
+    net = torch.nn.Sequential(torch.nn.Linear(71, 128), torch.nn.ReLU(), torch.nn.Linear(128, 128), torch.nn.ReLU(),
+                              torch.nn.Linear(128, 128), torch.nn.ReLU(), torch.nn.Linear(128, len(J)))
+    cache = MODELS / f"mlp_{args.tag}.pt"
+    if cache.exists():
+        net.load_state_dict(torch.load(cache)); return net.eval()
+    torch.manual_seed(0); rng = np.random.default_rng(0); n = len(tr["time"])
+    Y = torch.tensor(((tr["truth"] - MU) / SD)[:, J]); L = torch.tensor(tr["live"][:, J])
+    opt = torch.optim.Adam(net.parameters(), lr=1e-3)
+    sched = torch.optim.lr_scheduler.OneCycleLR(opt, max_lr=2e-3, total_steps=epochs * (n // 64 + 1))
+    for _ in range(epochs):
+        X = mlp_in(tr, GROUP_MASK[rng.integers(0, 3, n)])
+        for b in torch.randperm(n).split(64):
+            loss = ((net(X[b]) - Y[b])[L[b]] ** 2).mean()
+            opt.zero_grad(); loss.backward(); opt.step(); sched.step()
+    torch.save(net.state_dict(), cache)
+    return net.eval()
+
+
+def field_mlp(run, net):
+    with torch.no_grad():
+        return (sum(net(mlp_in(run, GROUP_MASK[k])) for k in range(3)) / 3 - net(mlp_in(run))).numpy()
+
+
 def detect(z, live, times, kappa, h, mute_radius, calm_window):
     c = np.zeros(z.shape[1]); muted = np.zeros(z.shape[1], bool); out = []
     for t in range(len(z)):
@@ -102,14 +148,21 @@ def load(name, year):
     r = g.load_run(name, year, every=args.every); r["name"] = f"{name}_{year}"; return r
 
 ref, val, test = load(args.ref, 2018), load(args.val, 2018), load(args.test, 2019)
+if args.drop:                                        # the detector is fitted and tuned with all sensors working
+    test["dead"] = np.zeros(33, bool)
+    test["dead"][np.random.default_rng(args.drop_seed).choice(33, args.drop, replace=False)] = True
 lab_val = pd.read_csv(OUT / args.val / "leak_flows.csv.gz", index_col=0, parse_dates=True)
 lab_test = pd.read_csv(OUT / args.test / "leak_flows.csv.gz", index_col=0, parse_dates=True)
 warm = int(np.searchsorted(ref["time"], np.datetime64("2018-01-29")))
 split = int(np.searchsorted(ref["time"], np.datetime64("2018-11-01")))
-maps = fit_ridge({k: v[warm:split] for k, v in ref.items() if k != "name"})
+train = {k: v[warm:split] for k, v in ref.items() if k != "name"}
+todo = [args.only] if args.only else ["GNN", "Ridge"]
+maps = fit_ridge(train) if "Ridge" in todo else None
+net = fit_mlp(train) if "MLP" in todo else None
+FIELD = dict(GNN=field_gnn, Ridge=lambda r: field_ridge(r, maps), MLP=lambda r: field_mlp(r, net))
 
 results, series = {}, {}
-for mname, field in [("GNN", field_gnn), ("Ridge", lambda r: field_ridge(r, maps))]:
+for mname, field in [(m, FIELD[m]) for m in todo]:
     f_ref, l_ref = field(ref)[split:], ref["live"][split:][:, J]
     n = np.maximum(l_ref.sum(0), 1)
     m = (f_ref * l_ref).sum(0) / n
@@ -137,7 +190,11 @@ for mname, field in [("GNN", field_gnn), ("Ridge", lambda r: field_ridge(r, maps
                           median_distance_m=round(float(tp.distance.median()), 1) if len(tp) else None)
     d.to_csv(RES / f"detections_{args.name}_{mname}.csv", index=False); series[mname] = d
     print(mname, json.dumps(results[mname]), flush=True)
-(RES / f"detection_{args.name}.json").write_text(json.dumps(results, indent=1))
+_f = RES / f"detection_{args.name}.json"
+if args.only:                                        # add to the results already stored, and leave the figure as it is
+    results = (json.loads(_f.read_text()) if _f.exists() else {}) | results
+    _f.write_text(json.dumps(results, indent=1)); raise SystemExit
+_f.write_text(json.dumps(results, indent=1))
 
 import matplotlib
 matplotlib.use("Agg")
