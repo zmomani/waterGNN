@@ -1,0 +1,2244 @@
+{
+ "summary": {
+  "E1 continuous": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1402.7580999999998,
+    "within_300": 0,
+    "within_600": 3
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1064.6745999999998,
+    "within_300": 0,
+    "within_600": 2
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1804.1900000000003,
+    "within_300": 1,
+    "within_600": 6
+   }
+  },
+  "E3 S48": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1607.2849500000002,
+    "within_300": 1,
+    "within_600": 4
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 927.6990999999999,
+    "within_300": 3,
+    "within_600": 6
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1381.2188,
+    "within_300": 0,
+    "within_600": 4
+   }
+  },
+  "S24 unseen": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1682.6920499999999,
+    "within_300": 1,
+    "within_600": 4
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1652.7062000000003,
+    "within_300": 1,
+    "within_600": 3
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1381.2188,
+    "within_300": 0,
+    "within_600": 3
+   }
+  },
+  "S72 unseen": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1490.9045000000003,
+    "within_300": 1,
+    "within_600": 3
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1481.1199000000004,
+    "within_300": 0,
+    "within_600": 3
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1537.3783999999998,
+    "within_300": 0,
+    "within_600": 2
+   }
+  },
+  "S48, 6 sensors failed": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1425.2012500000003,
+    "within_300": 1,
+    "within_600": 4
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1208.63095,
+    "within_300": 1,
+    "within_600": 3
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1523.9741999999999,
+    "within_300": 0,
+    "within_600": 4
+   }
+  },
+  "Continuous, 6 sensors failed": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1334.2052500000002,
+    "within_300": 0,
+    "within_600": 4
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1032.6854,
+    "within_300": 0,
+    "within_600": 1
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1642.4841999999999,
+    "within_300": 1,
+    "within_600": 6
+   }
+  }
+ },
+ "detail": {
+  "E1 continuous": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p350",
+     "distance_m": 1330.0012000000002
+    },
+    {
+     "leak": "p427",
+     "estimate": "p350",
+     "distance_m": 635.4866499999998
+    },
+    {
+     "leak": "p810",
+     "estimate": "p350",
+     "distance_m": 2157.9708499999997
+    },
+    {
+     "leak": "p654",
+     "estimate": "p350",
+     "distance_m": 1590.2605999999996
+    },
+    {
+     "leak": "p523",
+     "estimate": "p795",
+     "distance_m": 2322.6798
+    },
+    {
+     "leak": "p827",
+     "estimate": "p883",
+     "distance_m": 564.6789
+    },
+    {
+     "leak": "p280",
+     "estimate": "p350",
+     "distance_m": 1056.4977999999999
+    },
+    {
+     "leak": "p653",
+     "estimate": "p350",
+     "distance_m": 1646.2548999999997
+    },
+    {
+     "leak": "p710",
+     "estimate": "p350",
+     "distance_m": 1334.2052500000002
+    },
+    {
+     "leak": "p514",
+     "estimate": "p350",
+     "distance_m": 1323.2356499999996
+    },
+    {
+     "leak": "p331",
+     "estimate": "p350",
+     "distance_m": 304.76869999999997
+    },
+    {
+     "leak": "p193",
+     "estimate": "p350",
+     "distance_m": 2563.6703
+    },
+    {
+     "leak": "p277",
+     "estimate": "p350",
+     "distance_m": 1082.9623
+    },
+    {
+     "leak": "p142",
+     "estimate": "p350",
+     "distance_m": 1481.9962500000004
+    },
+    {
+     "leak": "p680",
+     "estimate": "p350",
+     "distance_m": 1438.0302499999998
+    },
+    {
+     "leak": "p586",
+     "estimate": "p350",
+     "distance_m": 1402.7580999999998
+    },
+    {
+     "leak": "p721",
+     "estimate": "p350",
+     "distance_m": 1333.2599999999998
+    },
+    {
+     "leak": "p800",
+     "estimate": "p350",
+     "distance_m": 1951.0540999999996
+    },
+    {
+     "leak": "p123",
+     "estimate": "p350",
+     "distance_m": 1061.0081500000001
+    },
+    {
+     "leak": "p455",
+     "estimate": "p350",
+     "distance_m": 1771.6398999999997
+    },
+    {
+     "leak": "p762",
+     "estimate": "p350",
+     "distance_m": 1721.5384
+    },
+    {
+     "leak": "p426",
+     "estimate": "p350",
+     "distance_m": 586.0518999999998
+    },
+    {
+     "leak": "p879",
+     "estimate": "p350",
+     "distance_m": 2393.5390500000003
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p726",
+     "distance_m": 2101.9576500000007
+    },
+    {
+     "leak": "p427",
+     "estimate": "p726",
+     "distance_m": 693.3778000000002
+    },
+    {
+     "leak": "p810",
+     "estimate": "p726",
+     "distance_m": 976.6128999999997
+    },
+    {
+     "leak": "p654",
+     "estimate": "p726",
+     "distance_m": 1083.86915
+    },
+    {
+     "leak": "p523",
+     "estimate": "p707",
+     "distance_m": 1636.6503999999998
+    },
+    {
+     "leak": "p827",
+     "estimate": "p727",
+     "distance_m": 866.9272000000001
+    },
+    {
+     "leak": "p280",
+     "estimate": "p726",
+     "distance_m": 1828.4542500000005
+    },
+    {
+     "leak": "p653",
+     "estimate": "p699",
+     "distance_m": 917.95185
+    },
+    {
+     "leak": "p710",
+     "estimate": "p726",
+     "distance_m": 409.8746
+    },
+    {
+     "leak": "p514",
+     "estimate": "p699",
+     "distance_m": 1503.9645999999993
+    },
+    {
+     "leak": "p331",
+     "estimate": "p726",
+     "distance_m": 1175.8580500000003
+    },
+    {
+     "leak": "p193",
+     "estimate": "p726",
+     "distance_m": 1234.80585
+    },
+    {
+     "leak": "p277",
+     "estimate": "p726",
+     "distance_m": 1854.9187500000003
+    },
+    {
+     "leak": "p142",
+     "estimate": "p692",
+     "distance_m": 883.2137499999999
+    },
+    {
+     "leak": "p680",
+     "estimate": "p726",
+     "distance_m": 785.459
+    },
+    {
+     "leak": "p586",
+     "estimate": "p726",
+     "distance_m": 1626.64345
+    },
+    {
+     "leak": "p721",
+     "estimate": "p726",
+     "distance_m": 671.66375
+    },
+    {
+     "leak": "p800",
+     "estimate": "p726",
+     "distance_m": 622.1896499999999
+    },
+    {
+     "leak": "p123",
+     "estimate": "p726",
+     "distance_m": 1233.0849000000003
+    },
+    {
+     "leak": "p455",
+     "estimate": "p726",
+     "distance_m": 2276.1433500000003
+    },
+    {
+     "leak": "p762",
+     "estimate": "p726",
+     "distance_m": 590.0680500000001
+    },
+    {
+     "leak": "p426",
+     "estimate": "p726",
+     "distance_m": 742.8125500000001
+    },
+    {
+     "leak": "p879",
+     "estimate": "p726",
+     "distance_m": 1064.6745999999998
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p843",
+     "distance_m": 2900.09435
+    },
+    {
+     "leak": "p427",
+     "estimate": "p843",
+     "distance_m": 1491.5145
+    },
+    {
+     "leak": "p810",
+     "estimate": "p843",
+     "distance_m": 367.0588
+    },
+    {
+     "leak": "p654",
+     "estimate": "p843",
+     "distance_m": 1829.1240500000001
+    },
+    {
+     "leak": "p523",
+     "estimate": "p835",
+     "distance_m": 2616.0655500000007
+    },
+    {
+     "leak": "p827",
+     "estimate": "p802",
+     "distance_m": 447.04125000000005
+    },
+    {
+     "leak": "p280",
+     "estimate": "p843",
+     "distance_m": 2626.59095
+    },
+    {
+     "leak": "p653",
+     "estimate": "p802",
+     "distance_m": 1804.1900000000003
+    },
+    {
+     "leak": "p710",
+     "estimate": "p843",
+     "distance_m": 842.9608999999999
+    },
+    {
+     "leak": "p514",
+     "estimate": "p802",
+     "distance_m": 2390.2027500000004
+    },
+    {
+     "leak": "p331",
+     "estimate": "p843",
+     "distance_m": 1973.99475
+    },
+    {
+     "leak": "p193",
+     "estimate": "p843",
+     "distance_m": 442.80145
+    },
+    {
+     "leak": "p277",
+     "estimate": "p843",
+     "distance_m": 2653.05545
+    },
+    {
+     "leak": "p142",
+     "estimate": "p835",
+     "distance_m": 1807.114
+    },
+    {
+     "leak": "p680",
+     "estimate": "p843",
+     "distance_m": 1511.3529
+    },
+    {
+     "leak": "p586",
+     "estimate": "p835",
+     "distance_m": 2349.7416500000004
+    },
+    {
+     "leak": "p721",
+     "estimate": "p843",
+     "distance_m": 868.3742500000001
+    },
+    {
+     "leak": "p800",
+     "estimate": "p802",
+     "distance_m": 222.74980000000002
+    },
+    {
+     "leak": "p123",
+     "estimate": "p843",
+     "distance_m": 1978.3398
+    },
+    {
+     "leak": "p455",
+     "estimate": "p843",
+     "distance_m": 3021.3982499999997
+    },
+    {
+     "leak": "p762",
+     "estimate": "p843",
+     "distance_m": 474.19595
+    },
+    {
+     "leak": "p426",
+     "estimate": "p843",
+     "distance_m": 1540.9492500000003
+    },
+    {
+     "leak": "p879",
+     "estimate": "p843",
+     "distance_m": 596.7878000000001
+    }
+   ]
+  },
+  "E3 S48": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p62",
+     "distance_m": 2784.3463500000003
+    },
+    {
+     "leak": "p427",
+     "estimate": "p62",
+     "distance_m": 1375.7665000000002
+    },
+    {
+     "leak": "p810",
+     "estimate": "p62",
+     "distance_m": 587.1328
+    },
+    {
+     "leak": "p654",
+     "estimate": "p62",
+     "distance_m": 1713.3760500000003
+    },
+    {
+     "leak": "p523",
+     "estimate": "p62",
+     "distance_m": 2522.47425
+    },
+    {
+     "leak": "p827",
+     "estimate": "p62",
+     "distance_m": 406.0335
+    },
+    {
+     "leak": "p280",
+     "estimate": "p62",
+     "distance_m": 2510.84295
+    },
+    {
+     "leak": "p653",
+     "estimate": "p796",
+     "distance_m": 1607.2849500000002
+    },
+    {
+     "leak": "p710",
+     "estimate": "p62",
+     "distance_m": 727.2128999999999
+    },
+    {
+     "leak": "p514",
+     "estimate": "p796",
+     "distance_m": 2193.2977
+    },
+    {
+     "leak": "p331",
+     "estimate": "p62",
+     "distance_m": 1858.2467500000002
+    },
+    {
+     "leak": "p193",
+     "estimate": "p62",
+     "distance_m": 719.1644500000001
+    },
+    {
+     "leak": "p277",
+     "estimate": "p62",
+     "distance_m": 2537.3074500000002
+    },
+    {
+     "leak": "p142",
+     "estimate": "p62",
+     "distance_m": 1713.5227000000002
+    },
+    {
+     "leak": "p680",
+     "estimate": "p62",
+     "distance_m": 1395.6049000000003
+    },
+    {
+     "leak": "p586",
+     "estimate": "p65",
+     "distance_m": 2250.84095
+    },
+    {
+     "leak": "p721",
+     "estimate": "p62",
+     "distance_m": 867.88765
+    },
+    {
+     "leak": "p800",
+     "estimate": "p65",
+     "distance_m": 99.24295
+    },
+    {
+     "leak": "p123",
+     "estimate": "p62",
+     "distance_m": 1862.5918
+    },
+    {
+     "leak": "p455",
+     "estimate": "p62",
+     "distance_m": 2905.6502499999997
+    },
+    {
+     "leak": "p762",
+     "estimate": "p62",
+     "distance_m": 473.70935000000003
+    },
+    {
+     "leak": "p426",
+     "estimate": "p62",
+     "distance_m": 1425.2012500000003
+    },
+    {
+     "leak": "p879",
+     "estimate": "p62",
+     "distance_m": 604.8658
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p153",
+     "distance_m": 1853.7987000000005
+    },
+    {
+     "leak": "p427",
+     "estimate": "p153",
+     "distance_m": 445.2188499999999
+    },
+    {
+     "leak": "p810",
+     "estimate": "p153",
+     "distance_m": 1077.26535
+    },
+    {
+     "leak": "p654",
+     "estimate": "p153",
+     "distance_m": 732.6634
+    },
+    {
+     "leak": "p523",
+     "estimate": "p708",
+     "distance_m": 1688.4789499999997
+    },
+    {
+     "leak": "p827",
+     "estimate": "p153",
+     "distance_m": 1217.74855
+    },
+    {
+     "leak": "p280",
+     "estimate": "p153",
+     "distance_m": 1580.2953000000002
+    },
+    {
+     "leak": "p653",
+     "estimate": "p153",
+     "distance_m": 788.6577000000001
+    },
+    {
+     "leak": "p710",
+     "estimate": "p153",
+     "distance_m": 253.49975000000003
+    },
+    {
+     "leak": "p514",
+     "estimate": "p7",
+     "distance_m": 1342.5454499999998
+    },
+    {
+     "leak": "p331",
+     "estimate": "p153",
+     "distance_m": 927.6990999999999
+    },
+    {
+     "leak": "p193",
+     "estimate": "p153",
+     "distance_m": 1533.1298
+    },
+    {
+     "leak": "p277",
+     "estimate": "p153",
+     "distance_m": 1606.7598
+    },
+    {
+     "leak": "p142",
+     "estimate": "p153",
+     "distance_m": 732.8100499999999
+    },
+    {
+     "leak": "p680",
+     "estimate": "p153",
+     "distance_m": 414.89225000000005
+    },
+    {
+     "leak": "p586",
+     "estimate": "p841",
+     "distance_m": 2484.033
+    },
+    {
+     "leak": "p721",
+     "estimate": "p153",
+     "distance_m": 252.5545
+    },
+    {
+     "leak": "p800",
+     "estimate": "p171",
+     "distance_m": 170.32575
+    },
+    {
+     "leak": "p123",
+     "estimate": "p153",
+     "distance_m": 881.87915
+    },
+    {
+     "leak": "p455",
+     "estimate": "p153",
+     "distance_m": 1924.9376000000002
+    },
+    {
+     "leak": "p762",
+     "estimate": "p153",
+     "distance_m": 640.8329
+    },
+    {
+     "leak": "p426",
+     "estimate": "p153",
+     "distance_m": 494.6535999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p153",
+     "distance_m": 1465.5619499999998
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p319",
+     "distance_m": 582.379
+    },
+    {
+     "leak": "p427",
+     "estimate": "p319",
+     "distance_m": 826.20085
+    },
+    {
+     "leak": "p810",
+     "estimate": "p319",
+     "distance_m": 2348.68505
+    },
+    {
+     "leak": "p654",
+     "estimate": "p319",
+     "distance_m": 1481.1199000000004
+    },
+    {
+     "leak": "p523",
+     "estimate": "p61",
+     "distance_m": 2530.8864000000003
+    },
+    {
+     "leak": "p827",
+     "estimate": "p61",
+     "distance_m": 414.44565
+    },
+    {
+     "leak": "p280",
+     "estimate": "p319",
+     "distance_m": 308.8756000000001
+    },
+    {
+     "leak": "p653",
+     "estimate": "p319",
+     "distance_m": 1439.7616
+    },
+    {
+     "leak": "p710",
+     "estimate": "p319",
+     "distance_m": 1524.9194500000003
+    },
+    {
+     "leak": "p514",
+     "estimate": "p319",
+     "distance_m": 932.81455
+    },
+    {
+     "leak": "p331",
+     "estimate": "p319",
+     "distance_m": 730.3056999999999
+    },
+    {
+     "leak": "p193",
+     "estimate": "p319",
+     "distance_m": 2754.3845000000006
+    },
+    {
+     "leak": "p277",
+     "estimate": "p319",
+     "distance_m": 335.3401
+    },
+    {
+     "leak": "p142",
+     "estimate": "p319",
+     "distance_m": 1091.57515
+    },
+    {
+     "leak": "p680",
+     "estimate": "p319",
+     "distance_m": 1628.74445
+    },
+    {
+     "leak": "p586",
+     "estimate": "p319",
+     "distance_m": 1012.3370000000001
+    },
+    {
+     "leak": "p721",
+     "estimate": "p319",
+     "distance_m": 1523.9741999999999
+    },
+    {
+     "leak": "p800",
+     "estimate": "p319",
+     "distance_m": 2141.7683000000006
+    },
+    {
+     "leak": "p123",
+     "estimate": "p319",
+     "distance_m": 670.5870499999999
+    },
+    {
+     "leak": "p455",
+     "estimate": "p319",
+     "distance_m": 1381.2188
+    },
+    {
+     "leak": "p762",
+     "estimate": "p319",
+     "distance_m": 1912.2526
+    },
+    {
+     "leak": "p426",
+     "estimate": "p319",
+     "distance_m": 776.7660999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p319",
+     "distance_m": 2584.253250000001
+    }
+   ]
+  },
+  "S24 unseen": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p62",
+     "distance_m": 2784.3463500000003
+    },
+    {
+     "leak": "p427",
+     "estimate": "p62",
+     "distance_m": 1375.7665000000002
+    },
+    {
+     "leak": "p810",
+     "estimate": "p62",
+     "distance_m": 587.1328
+    },
+    {
+     "leak": "p654",
+     "estimate": "p62",
+     "distance_m": 1713.3760500000003
+    },
+    {
+     "leak": "p523",
+     "estimate": "p62",
+     "distance_m": 2522.47425
+    },
+    {
+     "leak": "p827",
+     "estimate": "p62",
+     "distance_m": 406.0335
+    },
+    {
+     "leak": "p280",
+     "estimate": "p62",
+     "distance_m": 2510.84295
+    },
+    {
+     "leak": "p653",
+     "estimate": "p789",
+     "distance_m": 1682.6920499999999
+    },
+    {
+     "leak": "p710",
+     "estimate": "p62",
+     "distance_m": 727.2128999999999
+    },
+    {
+     "leak": "p514",
+     "estimate": "p789",
+     "distance_m": 2268.7048
+    },
+    {
+     "leak": "p331",
+     "estimate": "p62",
+     "distance_m": 1858.2467500000002
+    },
+    {
+     "leak": "p193",
+     "estimate": "p62",
+     "distance_m": 719.1644500000001
+    },
+    {
+     "leak": "p277",
+     "estimate": "p62",
+     "distance_m": 2537.3074500000002
+    },
+    {
+     "leak": "p142",
+     "estimate": "p62",
+     "distance_m": 1713.5227000000002
+    },
+    {
+     "leak": "p680",
+     "estimate": "p62",
+     "distance_m": 1395.6049000000003
+    },
+    {
+     "leak": "p586",
+     "estimate": "p65",
+     "distance_m": 2250.84095
+    },
+    {
+     "leak": "p721",
+     "estimate": "p62",
+     "distance_m": 867.88765
+    },
+    {
+     "leak": "p800",
+     "estimate": "p65",
+     "distance_m": 99.24295
+    },
+    {
+     "leak": "p123",
+     "estimate": "p62",
+     "distance_m": 1862.5918
+    },
+    {
+     "leak": "p455",
+     "estimate": "p62",
+     "distance_m": 2905.6502499999997
+    },
+    {
+     "leak": "p762",
+     "estimate": "p62",
+     "distance_m": 473.70935000000003
+    },
+    {
+     "leak": "p426",
+     "estimate": "p62",
+     "distance_m": 1425.2012500000003
+    },
+    {
+     "leak": "p879",
+     "estimate": "p62",
+     "distance_m": 604.8658
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p567",
+     "distance_m": 1815.5202000000006
+    },
+    {
+     "leak": "p427",
+     "estimate": "p567",
+     "distance_m": 1687.65645
+    },
+    {
+     "leak": "p810",
+     "estimate": "p567",
+     "distance_m": 2542.811249999999
+    },
+    {
+     "leak": "p654",
+     "estimate": "p567",
+     "distance_m": 732.8824999999999
+    },
+    {
+     "leak": "p523",
+     "estimate": "p567",
+     "distance_m": 324.6331
+    },
+    {
+     "leak": "p827",
+     "estimate": "p567",
+     "distance_m": 2683.2944499999994
+    },
+    {
+     "leak": "p280",
+     "estimate": "p567",
+     "distance_m": 1542.0168000000003
+    },
+    {
+     "leak": "p653",
+     "estimate": "p567",
+     "distance_m": 676.8882
+    },
+    {
+     "leak": "p710",
+     "estimate": "p567",
+     "distance_m": 1719.04565
+    },
+    {
+     "leak": "p514",
+     "estimate": "p567",
+     "distance_m": 539.0610500000001
+    },
+    {
+     "leak": "p331",
+     "estimate": "p567",
+     "distance_m": 1606.2458000000004
+    },
+    {
+     "leak": "p193",
+     "estimate": "p567",
+     "distance_m": 2998.6756999999993
+    },
+    {
+     "leak": "p277",
+     "estimate": "p567",
+     "distance_m": 1568.4813000000001
+    },
+    {
+     "leak": "p142",
+     "estimate": "p567",
+     "distance_m": 836.4201499999998
+    },
+    {
+     "leak": "p680",
+     "estimate": "p567",
+     "distance_m": 1822.8706499999998
+    },
+    {
+     "leak": "p586",
+     "estimate": "p567",
+     "distance_m": 220.8042
+    },
+    {
+     "leak": "p721",
+     "estimate": "p567",
+     "distance_m": 1718.1003999999998
+    },
+    {
+     "leak": "p800",
+     "estimate": "p567",
+     "distance_m": 2438.9413
+    },
+    {
+     "leak": "p123",
+     "estimate": "p567",
+     "distance_m": 827.7625499999998
+    },
+    {
+     "leak": "p455",
+     "estimate": "p567",
+     "distance_m": 691.4091000000001
+    },
+    {
+     "leak": "p762",
+     "estimate": "p567",
+     "distance_m": 2106.3787999999995
+    },
+    {
+     "leak": "p426",
+     "estimate": "p567",
+     "distance_m": 1652.7062000000003
+    },
+    {
+     "leak": "p879",
+     "estimate": "p567",
+     "distance_m": 2881.426250000001
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p319",
+     "distance_m": 582.379
+    },
+    {
+     "leak": "p427",
+     "estimate": "p319",
+     "distance_m": 826.20085
+    },
+    {
+     "leak": "p810",
+     "estimate": "p319",
+     "distance_m": 2348.68505
+    },
+    {
+     "leak": "p654",
+     "estimate": "p319",
+     "distance_m": 1481.1199000000004
+    },
+    {
+     "leak": "p523",
+     "estimate": "p319",
+     "distance_m": 1269.3795999999998
+    },
+    {
+     "leak": "p827",
+     "estimate": "p319",
+     "distance_m": 2439.0032500000007
+    },
+    {
+     "leak": "p280",
+     "estimate": "p319",
+     "distance_m": 308.8756000000001
+    },
+    {
+     "leak": "p653",
+     "estimate": "p319",
+     "distance_m": 1439.7616
+    },
+    {
+     "leak": "p710",
+     "estimate": "p319",
+     "distance_m": 1524.9194500000003
+    },
+    {
+     "leak": "p514",
+     "estimate": "p319",
+     "distance_m": 932.81455
+    },
+    {
+     "leak": "p331",
+     "estimate": "p319",
+     "distance_m": 730.3056999999999
+    },
+    {
+     "leak": "p193",
+     "estimate": "p319",
+     "distance_m": 2754.3845000000006
+    },
+    {
+     "leak": "p277",
+     "estimate": "p319",
+     "distance_m": 335.3401
+    },
+    {
+     "leak": "p142",
+     "estimate": "p319",
+     "distance_m": 1091.57515
+    },
+    {
+     "leak": "p680",
+     "estimate": "p319",
+     "distance_m": 1628.74445
+    },
+    {
+     "leak": "p586",
+     "estimate": "p319",
+     "distance_m": 1012.3370000000001
+    },
+    {
+     "leak": "p721",
+     "estimate": "p319",
+     "distance_m": 1523.9741999999999
+    },
+    {
+     "leak": "p800",
+     "estimate": "p319",
+     "distance_m": 2141.7683000000006
+    },
+    {
+     "leak": "p123",
+     "estimate": "p319",
+     "distance_m": 670.5870499999999
+    },
+    {
+     "leak": "p455",
+     "estimate": "p319",
+     "distance_m": 1381.2188
+    },
+    {
+     "leak": "p762",
+     "estimate": "p319",
+     "distance_m": 1912.2526
+    },
+    {
+     "leak": "p426",
+     "estimate": "p319",
+     "distance_m": 776.7660999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p319",
+     "distance_m": 2584.253250000001
+    }
+   ]
+  },
+  "S72 unseen": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p58",
+     "distance_m": 2612.0398
+    },
+    {
+     "leak": "p427",
+     "estimate": "p58",
+     "distance_m": 1203.45995
+    },
+    {
+     "leak": "p810",
+     "estimate": "p58",
+     "distance_m": 335.83435
+    },
+    {
+     "leak": "p654",
+     "estimate": "p58",
+     "distance_m": 1490.9045000000003
+    },
+    {
+     "leak": "p523",
+     "estimate": "p58",
+     "distance_m": 2300.0026999999995
+    },
+    {
+     "leak": "p827",
+     "estimate": "p58",
+     "distance_m": 674.9303499999999
+    },
+    {
+     "leak": "p280",
+     "estimate": "p58",
+     "distance_m": 2338.5364
+    },
+    {
+     "leak": "p653",
+     "estimate": "p58",
+     "distance_m": 1546.8988000000004
+    },
+    {
+     "leak": "p710",
+     "estimate": "p58",
+     "distance_m": 634.55935
+    },
+    {
+     "leak": "p514",
+     "estimate": "p58",
+     "distance_m": 2132.91155
+    },
+    {
+     "leak": "p331",
+     "estimate": "p58",
+     "distance_m": 1685.9402
+    },
+    {
+     "leak": "p193",
+     "estimate": "p58",
+     "distance_m": 890.3468999999999
+    },
+    {
+     "leak": "p277",
+     "estimate": "p58",
+     "distance_m": 2365.0009
+    },
+    {
+     "leak": "p142",
+     "estimate": "p58",
+     "distance_m": 1491.0511500000002
+    },
+    {
+     "leak": "p680",
+     "estimate": "p58",
+     "distance_m": 1173.13335
+    },
+    {
+     "leak": "p586",
+     "estimate": "p58",
+     "distance_m": 2033.6787999999995
+    },
+    {
+     "leak": "p721",
+     "estimate": "p58",
+     "distance_m": 511.5865
+    },
+    {
+     "leak": "p800",
+     "estimate": "p58",
+     "distance_m": 747.4562999999999
+    },
+    {
+     "leak": "p123",
+     "estimate": "p58",
+     "distance_m": 1640.12025
+    },
+    {
+     "leak": "p455",
+     "estimate": "p58",
+     "distance_m": 2683.178699999999
+    },
+    {
+     "leak": "p762",
+     "estimate": "p58",
+     "distance_m": 165.32549999999998
+    },
+    {
+     "leak": "p426",
+     "estimate": "p58",
+     "distance_m": 1252.8947
+    },
+    {
+     "leak": "p879",
+     "estimate": "p58",
+     "distance_m": 1035.83595
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p319",
+     "distance_m": 582.379
+    },
+    {
+     "leak": "p427",
+     "estimate": "p319",
+     "distance_m": 826.20085
+    },
+    {
+     "leak": "p810",
+     "estimate": "p319",
+     "distance_m": 2348.68505
+    },
+    {
+     "leak": "p654",
+     "estimate": "p319",
+     "distance_m": 1481.1199000000004
+    },
+    {
+     "leak": "p523",
+     "estimate": "p873",
+     "distance_m": 2881.3917499999993
+    },
+    {
+     "leak": "p827",
+     "estimate": "p32",
+     "distance_m": 2624.2352
+    },
+    {
+     "leak": "p280",
+     "estimate": "p319",
+     "distance_m": 308.8756000000001
+    },
+    {
+     "leak": "p653",
+     "estimate": "p319",
+     "distance_m": 1439.7616
+    },
+    {
+     "leak": "p710",
+     "estimate": "p319",
+     "distance_m": 1524.9194500000003
+    },
+    {
+     "leak": "p514",
+     "estimate": "p873",
+     "distance_m": 2714.3005999999996
+    },
+    {
+     "leak": "p331",
+     "estimate": "p319",
+     "distance_m": 730.3056999999999
+    },
+    {
+     "leak": "p193",
+     "estimate": "p319",
+     "distance_m": 2754.3845000000006
+    },
+    {
+     "leak": "p277",
+     "estimate": "p319",
+     "distance_m": 335.3401
+    },
+    {
+     "leak": "p142",
+     "estimate": "p319",
+     "distance_m": 1091.57515
+    },
+    {
+     "leak": "p680",
+     "estimate": "p319",
+     "distance_m": 1628.74445
+    },
+    {
+     "leak": "p586",
+     "estimate": "p873",
+     "distance_m": 2615.067849999999
+    },
+    {
+     "leak": "p721",
+     "estimate": "p319",
+     "distance_m": 1523.9741999999999
+    },
+    {
+     "leak": "p800",
+     "estimate": "p873",
+     "distance_m": 753.4991500000001
+    },
+    {
+     "leak": "p123",
+     "estimate": "p319",
+     "distance_m": 670.5870499999999
+    },
+    {
+     "leak": "p455",
+     "estimate": "p319",
+     "distance_m": 1381.2188
+    },
+    {
+     "leak": "p762",
+     "estimate": "p319",
+     "distance_m": 1912.2526
+    },
+    {
+     "leak": "p426",
+     "estimate": "p319",
+     "distance_m": 776.7660999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p319",
+     "distance_m": 2584.253250000001
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p839",
+     "distance_m": 2853.8770499999996
+    },
+    {
+     "leak": "p427",
+     "estimate": "p839",
+     "distance_m": 1445.2972
+    },
+    {
+     "leak": "p810",
+     "estimate": "p839",
+     "distance_m": 1001.9162000000001
+    },
+    {
+     "leak": "p654",
+     "estimate": "p839",
+     "distance_m": 1835.7885500000002
+    },
+    {
+     "leak": "p523",
+     "estimate": "p795",
+     "distance_m": 2322.6798
+    },
+    {
+     "leak": "p827",
+     "estimate": "p795",
+     "distance_m": 714.4175499999999
+    },
+    {
+     "leak": "p280",
+     "estimate": "p839",
+     "distance_m": 2580.3736499999995
+    },
+    {
+     "leak": "p653",
+     "estimate": "p795",
+     "distance_m": 1569.5759000000003
+    },
+    {
+     "leak": "p710",
+     "estimate": "p839",
+     "distance_m": 899.3069999999999
+    },
+    {
+     "leak": "p514",
+     "estimate": "p795",
+     "distance_m": 2155.58865
+    },
+    {
+     "leak": "p331",
+     "estimate": "p839",
+     "distance_m": 1927.77745
+    },
+    {
+     "leak": "p193",
+     "estimate": "p839",
+     "distance_m": 573.44645
+    },
+    {
+     "leak": "p277",
+     "estimate": "p839",
+     "distance_m": 2606.8381499999996
+    },
+    {
+     "leak": "p142",
+     "estimate": "p795",
+     "distance_m": 1513.7282500000001
+    },
+    {
+     "leak": "p680",
+     "estimate": "p839",
+     "distance_m": 1537.3783999999998
+    },
+    {
+     "leak": "p586",
+     "estimate": "p795",
+     "distance_m": 2056.3558999999996
+    },
+    {
+     "leak": "p721",
+     "estimate": "p839",
+     "distance_m": 1199.6389499999998
+    },
+    {
+     "leak": "p800",
+     "estimate": "p795",
+     "distance_m": 786.9435000000001
+    },
+    {
+     "leak": "p123",
+     "estimate": "p839",
+     "distance_m": 1985.0042999999998
+    },
+    {
+     "leak": "p455",
+     "estimate": "p839",
+     "distance_m": 3028.0627499999996
+    },
+    {
+     "leak": "p762",
+     "estimate": "p839",
+     "distance_m": 1038.29795
+    },
+    {
+     "leak": "p426",
+     "estimate": "p839",
+     "distance_m": 1494.73195
+    },
+    {
+     "leak": "p879",
+     "estimate": "p839",
+     "distance_m": 324.7584
+    }
+   ]
+  },
+  "S48, 6 sensors failed": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p62",
+     "distance_m": 2784.3463500000003
+    },
+    {
+     "leak": "p427",
+     "estimate": "p62",
+     "distance_m": 1375.7665000000002
+    },
+    {
+     "leak": "p810",
+     "estimate": "p62",
+     "distance_m": 587.1328
+    },
+    {
+     "leak": "p654",
+     "estimate": "p62",
+     "distance_m": 1713.3760500000003
+    },
+    {
+     "leak": "p523",
+     "estimate": "p62",
+     "distance_m": 2522.47425
+    },
+    {
+     "leak": "p827",
+     "estimate": "p62",
+     "distance_m": 406.0335
+    },
+    {
+     "leak": "p280",
+     "estimate": "p62",
+     "distance_m": 2510.84295
+    },
+    {
+     "leak": "p653",
+     "estimate": "p244",
+     "distance_m": 1954.8839000000003
+    },
+    {
+     "leak": "p710",
+     "estimate": "p62",
+     "distance_m": 727.2128999999999
+    },
+    {
+     "leak": "p514",
+     "estimate": "p319",
+     "distance_m": 932.81455
+    },
+    {
+     "leak": "p331",
+     "estimate": "p62",
+     "distance_m": 1858.2467500000002
+    },
+    {
+     "leak": "p193",
+     "estimate": "p62",
+     "distance_m": 719.1644500000001
+    },
+    {
+     "leak": "p277",
+     "estimate": "p62",
+     "distance_m": 2537.3074500000002
+    },
+    {
+     "leak": "p142",
+     "estimate": "p244",
+     "distance_m": 1606.6974500000003
+    },
+    {
+     "leak": "p680",
+     "estimate": "p62",
+     "distance_m": 1395.6049000000003
+    },
+    {
+     "leak": "p586",
+     "estimate": "p65",
+     "distance_m": 2250.84095
+    },
+    {
+     "leak": "p721",
+     "estimate": "p62",
+     "distance_m": 867.88765
+    },
+    {
+     "leak": "p800",
+     "estimate": "p65",
+     "distance_m": 99.24295
+    },
+    {
+     "leak": "p123",
+     "estimate": "p62",
+     "distance_m": 1862.5918
+    },
+    {
+     "leak": "p455",
+     "estimate": "p62",
+     "distance_m": 2905.6502499999997
+    },
+    {
+     "leak": "p762",
+     "estimate": "p62",
+     "distance_m": 473.70935000000003
+    },
+    {
+     "leak": "p426",
+     "estimate": "p62",
+     "distance_m": 1425.2012500000003
+    },
+    {
+     "leak": "p879",
+     "estimate": "p62",
+     "distance_m": 604.8658
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p86",
+     "distance_m": 1371.4449500000005
+    },
+    {
+     "leak": "p427",
+     "estimate": "p86",
+     "distance_m": 1258.0656999999999
+    },
+    {
+     "leak": "p810",
+     "estimate": "p86",
+     "distance_m": 2254.4672
+    },
+    {
+     "leak": "p654",
+     "estimate": "p86",
+     "distance_m": 1060.9422499999998
+    },
+    {
+     "leak": "p523",
+     "estimate": "p533",
+     "distance_m": 720.32065
+    },
+    {
+     "leak": "p827",
+     "estimate": "p533",
+     "distance_m": 2311.984800000001
+    },
+    {
+     "leak": "p280",
+     "estimate": "p86",
+     "distance_m": 1097.9415500000002
+    },
+    {
+     "leak": "p653",
+     "estimate": "p533",
+     "distance_m": 981.5316499999998
+    },
+    {
+     "leak": "p710",
+     "estimate": "p86",
+     "distance_m": 1430.7016000000006
+    },
+    {
+     "leak": "p514",
+     "estimate": "p533",
+     "distance_m": 432.9559
+    },
+    {
+     "leak": "p331",
+     "estimate": "p86",
+     "distance_m": 1162.1705500000003
+    },
+    {
+     "leak": "p193",
+     "estimate": "p86",
+     "distance_m": 2710.33165
+    },
+    {
+     "leak": "p277",
+     "estimate": "p86",
+     "distance_m": 1124.40605
+    },
+    {
+     "leak": "p142",
+     "estimate": "p86",
+     "distance_m": 716.3108
+    },
+    {
+     "leak": "p680",
+     "estimate": "p86",
+     "distance_m": 1534.5266000000001
+    },
+    {
+     "leak": "p586",
+     "estimate": "p533",
+     "distance_m": 453.99675
+    },
+    {
+     "leak": "p721",
+     "estimate": "p86",
+     "distance_m": 1429.75635
+    },
+    {
+     "leak": "p800",
+     "estimate": "p533",
+     "distance_m": 2067.6316500000003
+    },
+    {
+     "leak": "p123",
+     "estimate": "p86",
+     "distance_m": 295.3227
+    },
+    {
+     "leak": "p455",
+     "estimate": "p86",
+     "distance_m": 904.53465
+    },
+    {
+     "leak": "p762",
+     "estimate": "p86",
+     "distance_m": 1818.0347500000003
+    },
+    {
+     "leak": "p426",
+     "estimate": "p86",
+     "distance_m": 1208.63095
+    },
+    {
+     "leak": "p879",
+     "estimate": "p86",
+     "distance_m": 2593.082200000001
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p319",
+     "distance_m": 582.379
+    },
+    {
+     "leak": "p427",
+     "estimate": "p319",
+     "distance_m": 826.20085
+    },
+    {
+     "leak": "p810",
+     "estimate": "p319",
+     "distance_m": 2348.68505
+    },
+    {
+     "leak": "p654",
+     "estimate": "p319",
+     "distance_m": 1481.1199000000004
+    },
+    {
+     "leak": "p523",
+     "estimate": "p61",
+     "distance_m": 2530.8864000000003
+    },
+    {
+     "leak": "p827",
+     "estimate": "p61",
+     "distance_m": 414.44565
+    },
+    {
+     "leak": "p280",
+     "estimate": "p319",
+     "distance_m": 308.8756000000001
+    },
+    {
+     "leak": "p653",
+     "estimate": "p796",
+     "distance_m": 1607.2849500000002
+    },
+    {
+     "leak": "p710",
+     "estimate": "p319",
+     "distance_m": 1524.9194500000003
+    },
+    {
+     "leak": "p514",
+     "estimate": "p796",
+     "distance_m": 2193.2977
+    },
+    {
+     "leak": "p331",
+     "estimate": "p319",
+     "distance_m": 730.3056999999999
+    },
+    {
+     "leak": "p193",
+     "estimate": "p319",
+     "distance_m": 2754.3845000000006
+    },
+    {
+     "leak": "p277",
+     "estimate": "p319",
+     "distance_m": 335.3401
+    },
+    {
+     "leak": "p142",
+     "estimate": "p319",
+     "distance_m": 1091.57515
+    },
+    {
+     "leak": "p680",
+     "estimate": "p319",
+     "distance_m": 1628.74445
+    },
+    {
+     "leak": "p586",
+     "estimate": "p795",
+     "distance_m": 2056.3558999999996
+    },
+    {
+     "leak": "p721",
+     "estimate": "p319",
+     "distance_m": 1523.9741999999999
+    },
+    {
+     "leak": "p800",
+     "estimate": "p319",
+     "distance_m": 2141.7683000000006
+    },
+    {
+     "leak": "p123",
+     "estimate": "p319",
+     "distance_m": 670.5870499999999
+    },
+    {
+     "leak": "p455",
+     "estimate": "p319",
+     "distance_m": 1381.2188
+    },
+    {
+     "leak": "p762",
+     "estimate": "p319",
+     "distance_m": 1912.2526
+    },
+    {
+     "leak": "p426",
+     "estimate": "p319",
+     "distance_m": 776.7660999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p319",
+     "distance_m": 2584.253250000001
+    }
+   ]
+  },
+  "Continuous, 6 sensors failed": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p350",
+     "distance_m": 1330.0012000000002
+    },
+    {
+     "leak": "p427",
+     "estimate": "p350",
+     "distance_m": 635.4866499999998
+    },
+    {
+     "leak": "p810",
+     "estimate": "p350",
+     "distance_m": 2157.9708499999997
+    },
+    {
+     "leak": "p654",
+     "estimate": "p350",
+     "distance_m": 1590.2605999999996
+    },
+    {
+     "leak": "p523",
+     "estimate": "p89",
+     "distance_m": 562.40305
+    },
+    {
+     "leak": "p827",
+     "estimate": "p883",
+     "distance_m": 564.6789
+    },
+    {
+     "leak": "p280",
+     "estimate": "p350",
+     "distance_m": 1056.4977999999999
+    },
+    {
+     "leak": "p653",
+     "estimate": "p350",
+     "distance_m": 1646.2548999999997
+    },
+    {
+     "leak": "p710",
+     "estimate": "p350",
+     "distance_m": 1334.2052500000002
+    },
+    {
+     "leak": "p514",
+     "estimate": "p350",
+     "distance_m": 1323.2356499999996
+    },
+    {
+     "leak": "p331",
+     "estimate": "p350",
+     "distance_m": 304.76869999999997
+    },
+    {
+     "leak": "p193",
+     "estimate": "p350",
+     "distance_m": 2563.6703
+    },
+    {
+     "leak": "p277",
+     "estimate": "p350",
+     "distance_m": 1082.9623
+    },
+    {
+     "leak": "p142",
+     "estimate": "p350",
+     "distance_m": 1481.9962500000004
+    },
+    {
+     "leak": "p680",
+     "estimate": "p350",
+     "distance_m": 1438.0302499999998
+    },
+    {
+     "leak": "p586",
+     "estimate": "p350",
+     "distance_m": 1402.7580999999998
+    },
+    {
+     "leak": "p721",
+     "estimate": "p350",
+     "distance_m": 1333.2599999999998
+    },
+    {
+     "leak": "p800",
+     "estimate": "p350",
+     "distance_m": 1951.0540999999996
+    },
+    {
+     "leak": "p123",
+     "estimate": "p350",
+     "distance_m": 1061.0081500000001
+    },
+    {
+     "leak": "p455",
+     "estimate": "p350",
+     "distance_m": 1771.6398999999997
+    },
+    {
+     "leak": "p762",
+     "estimate": "p350",
+     "distance_m": 1721.5384
+    },
+    {
+     "leak": "p426",
+     "estimate": "p350",
+     "distance_m": 586.0518999999998
+    },
+    {
+     "leak": "p879",
+     "estimate": "p350",
+     "distance_m": 2393.5390500000003
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p695",
+     "distance_m": 2050.7739000000006
+    },
+    {
+     "leak": "p427",
+     "estimate": "p695",
+     "distance_m": 642.1940500000002
+    },
+    {
+     "leak": "p810",
+     "estimate": "p695",
+     "distance_m": 1027.79665
+    },
+    {
+     "leak": "p654",
+     "estimate": "p695",
+     "distance_m": 1032.6854
+    },
+    {
+     "leak": "p523",
+     "estimate": "p727",
+     "distance_m": 1945.4647500000003
+    },
+    {
+     "leak": "p827",
+     "estimate": "p727",
+     "distance_m": 866.9272000000001
+    },
+    {
+     "leak": "p280",
+     "estimate": "p695",
+     "distance_m": 1777.2705000000003
+    },
+    {
+     "leak": "p653",
+     "estimate": "p532",
+     "distance_m": 934.0891999999999
+    },
+    {
+     "leak": "p710",
+     "estimate": "p695",
+     "distance_m": 461.05835
+    },
+    {
+     "leak": "p514",
+     "estimate": "p693",
+     "distance_m": 1574.94425
+    },
+    {
+     "leak": "p331",
+     "estimate": "p695",
+     "distance_m": 1124.6743000000001
+    },
+    {
+     "leak": "p193",
+     "estimate": "p695",
+     "distance_m": 1285.9895999999999
+    },
+    {
+     "leak": "p277",
+     "estimate": "p695",
+     "distance_m": 1803.7350000000001
+    },
+    {
+     "leak": "p142",
+     "estimate": "p694",
+     "distance_m": 982.9579499999998
+    },
+    {
+     "leak": "p680",
+     "estimate": "p695",
+     "distance_m": 734.27525
+    },
+    {
+     "leak": "p586",
+     "estimate": "p695",
+     "distance_m": 1575.4596999999999
+    },
+    {
+     "leak": "p721",
+     "estimate": "p695",
+     "distance_m": 620.48
+    },
+    {
+     "leak": "p800",
+     "estimate": "p695",
+     "distance_m": 673.3734000000002
+    },
+    {
+     "leak": "p123",
+     "estimate": "p695",
+     "distance_m": 1181.9011500000001
+    },
+    {
+     "leak": "p455",
+     "estimate": "p695",
+     "distance_m": 2224.9596
+    },
+    {
+     "leak": "p762",
+     "estimate": "p695",
+     "distance_m": 641.2518
+    },
+    {
+     "leak": "p426",
+     "estimate": "p695",
+     "distance_m": 691.6288000000001
+    },
+    {
+     "leak": "p879",
+     "estimate": "p695",
+     "distance_m": 1115.85835
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p843",
+     "distance_m": 2900.09435
+    },
+    {
+     "leak": "p427",
+     "estimate": "p843",
+     "distance_m": 1491.5145
+    },
+    {
+     "leak": "p810",
+     "estimate": "p843",
+     "distance_m": 367.0588
+    },
+    {
+     "leak": "p654",
+     "estimate": "p843",
+     "distance_m": 1829.1240500000001
+    },
+    {
+     "leak": "p523",
+     "estimate": "p331",
+     "distance_m": 1642.4841999999999
+    },
+    {
+     "leak": "p827",
+     "estimate": "p216",
+     "distance_m": 360.04224999999997
+    },
+    {
+     "leak": "p280",
+     "estimate": "p843",
+     "distance_m": 2626.59095
+    },
+    {
+     "leak": "p653",
+     "estimate": "p802",
+     "distance_m": 1804.1900000000003
+    },
+    {
+     "leak": "p710",
+     "estimate": "p843",
+     "distance_m": 842.9608999999999
+    },
+    {
+     "leak": "p514",
+     "estimate": "p802",
+     "distance_m": 2390.2027500000004
+    },
+    {
+     "leak": "p331",
+     "estimate": "p843",
+     "distance_m": 1973.99475
+    },
+    {
+     "leak": "p193",
+     "estimate": "p843",
+     "distance_m": 442.80145
+    },
+    {
+     "leak": "p277",
+     "estimate": "p843",
+     "distance_m": 2653.05545
+    },
+    {
+     "leak": "p142",
+     "estimate": "p843",
+     "distance_m": 1829.2707
+    },
+    {
+     "leak": "p680",
+     "estimate": "p843",
+     "distance_m": 1511.3529
+    },
+    {
+     "leak": "p586",
+     "estimate": "p843",
+     "distance_m": 2371.89835
+    },
+    {
+     "leak": "p721",
+     "estimate": "p843",
+     "distance_m": 868.3742500000001
+    },
+    {
+     "leak": "p800",
+     "estimate": "p61",
+     "distance_m": 217.1719
+    },
+    {
+     "leak": "p123",
+     "estimate": "p843",
+     "distance_m": 1978.3398
+    },
+    {
+     "leak": "p455",
+     "estimate": "p843",
+     "distance_m": 3021.3982499999997
+    },
+    {
+     "leak": "p762",
+     "estimate": "p843",
+     "distance_m": 474.19595
+    },
+    {
+     "leak": "p426",
+     "estimate": "p843",
+     "distance_m": 1540.9492500000003
+    },
+    {
+     "leak": "p879",
+     "estimate": "p843",
+     "distance_m": 596.7878000000001
+    }
+   ]
+  }
+ }
+}
