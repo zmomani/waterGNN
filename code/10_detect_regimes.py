@@ -25,12 +25,13 @@ ap.add_argument("--aware", action="store_true")
 ap.add_argument("--every", type=int, default=12)
 ap.add_argument("--drop", type=int, default=0, help="number of sensors that have failed in the test year")
 ap.add_argument("--drop-seed", type=int, default=0)
+ap.add_argument("--wide", action="store_true", help="wider grid of detector settings")
 ap.add_argument("--only", default="", help="run one model only (GNN, Ridge or MLP) and add it to the existing results")
 args = ap.parse_args()
 MODELS, RES = ROOT / "models", ROOT / "results"
 norm = np.load(MODELS / f"norm_{args.tag}.npz"); MU, SD = norm["mu"], norm["sd"]
-model = Reconstructor(g.EDGE_INDEX, g.N, in_channels=13 if args.aware else 11)
-model.load_state_dict(torch.load(MODELS / f"reconstructor_{args.tag}.pt")); model.eval()
+from gnn_load import load_model
+model = load_model(args.tag, args.aware)
 J = np.flatnonzero(g.IS_JUNCTION); JN = [g.NODES[i] for i in J]
 NODE_PIPE = {}
 for name, l in scoring._wn.links():
@@ -106,7 +107,7 @@ def fit_mlp(tr, epochs=300):
     with one sensor group hidden per sample."""
     net = torch.nn.Sequential(torch.nn.Linear(71, 128), torch.nn.ReLU(), torch.nn.Linear(128, 128), torch.nn.ReLU(),
                               torch.nn.Linear(128, 128), torch.nn.ReLU(), torch.nn.Linear(128, len(J)))
-    cache = MODELS / f"mlp_{args.tag}.pt"
+    cache = MODELS / f"mlp_{args.tag.replace('_tuned', '_hide')}.pt"
     if cache.exists():
         net.load_state_dict(torch.load(cache)); return net.eval()
     torch.manual_seed(0); rng = np.random.default_rng(0); n = len(tr["time"])
@@ -171,7 +172,9 @@ for mname, field in [(m, FIELD[m]) for m in todo]:
     for key, run in (("val", val), ("test", test)):
         zs[key] = np.where(run["live"][:, J], np.clip((field(run) - m) / s, -50, 50), 0.0)
     best = None
-    for kappa, h, rad, calm in itertools.product([0.5, 1.0, 1.5, 2.0], [50, 200, 800, 3200], [600.0, 1200.0], [24, 168]):
+    GRID = ([0.25, 0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0], [10, 25, 50, 200, 800, 3200], [600.0, 1200.0], [24, 168, 720]) if args.wide \
+        else ([0.5, 1.0, 1.5, 2.0], [50, 200, 800, 3200], [600.0, 1200.0], [24, 168])
+    for kappa, h, rad, calm in itertools.product(*GRID):
         sc = scoring.score_detections(detect(zs["val"][warm:], val["live"][warm:][:, J], val["time"][warm:], kappa, h, rad, calm),
                                       lab_val, "2018-01-29", "2018-12-31 23:55")
         if best is None or sc["score"] > best[0]:

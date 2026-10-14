@@ -1,0 +1,3108 @@
+{
+ "summary": {
+  "E1 continuous": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1528.12535,
+    "within_300": 0,
+    "within_600": 3,
+    "peak_median_m": 299.39515,
+    "peak_within_300": 12
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 982.8113,
+    "within_300": 0,
+    "within_600": 3,
+    "peak_median_m": 494.6535999999999,
+    "peak_within_300": 7
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1748.1957000000002,
+    "within_300": 1,
+    "within_600": 4,
+    "peak_median_m": 304.76869999999997,
+    "peak_within_300": 11
+   }
+  },
+  "E3 S48": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1269.3795999999998,
+    "within_300": 1,
+    "within_600": 2,
+    "peak_median_m": 334.06185000000005,
+    "peak_within_300": 9
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1374.6704499999998,
+    "within_300": 2,
+    "within_600": 3,
+    "peak_median_m": 341.40205000000003,
+    "peak_within_300": 10
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1381.2188,
+    "within_300": 0,
+    "within_600": 3,
+    "peak_median_m": 411.73394999999994,
+    "peak_within_300": 5
+   }
+  },
+  "S24 unseen": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1288.1256500000002,
+    "within_300": 2,
+    "within_600": 3,
+    "peak_median_m": 375.6335,
+    "peak_within_300": 9
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1652.7062000000003,
+    "within_300": 1,
+    "within_600": 3,
+    "peak_median_m": 353.2527,
+    "peak_within_300": 9
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1381.2188,
+    "within_300": 0,
+    "within_600": 3,
+    "peak_median_m": 335.3401,
+    "peak_within_300": 10
+   }
+  },
+  "S72 unseen": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1490.9045000000003,
+    "within_300": 1,
+    "within_600": 3,
+    "peak_median_m": 418.4043,
+    "peak_within_300": 7
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1754.5224,
+    "within_300": 1,
+    "within_600": 2,
+    "peak_median_m": 372.29515,
+    "peak_within_300": 5
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1513.5816000000002,
+    "within_300": 0,
+    "within_600": 3,
+    "peak_median_m": 315.70444999999995,
+    "peak_within_300": 11
+   }
+  },
+  "S48, 6 sensors failed": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1593.0929999999998,
+    "within_300": 1,
+    "within_600": 3,
+    "peak_median_m": 338.74355,
+    "peak_within_300": 8
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1125.66535,
+    "within_300": 1,
+    "within_600": 3,
+    "peak_median_m": 323.60835,
+    "peak_within_300": 11
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1523.9741999999999,
+    "within_300": 0,
+    "within_600": 2,
+    "peak_median_m": 322.62685000000005,
+    "peak_within_300": 9
+   }
+  },
+  "Continuous, 6 sensors failed": {
+   "GNN": {
+    "n": 23,
+    "median_m": 1528.12535,
+    "within_300": 0,
+    "within_600": 3,
+    "peak_median_m": 253.49975000000003,
+    "peak_within_300": 15
+   },
+   "Ridge": {
+    "n": 23,
+    "median_m": 1074.8002000000001,
+    "within_300": 0,
+    "within_600": 2,
+    "peak_median_m": 562.7738999999999,
+    "peak_within_300": 4
+   },
+   "MLP": {
+    "n": 23,
+    "median_m": 1642.4841999999999,
+    "within_300": 0,
+    "within_600": 5,
+    "peak_median_m": 274.45185000000004,
+    "peak_within_300": 12
+   }
+  }
+ },
+ "detail": {
+  "E1 continuous": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p182",
+     "distance_m": 2844.624,
+     "active": 23,
+     "nearest_peak_m": 640.8611000000001
+    },
+    {
+     "leak": "p427",
+     "estimate": "p182",
+     "distance_m": 1436.0441500000002,
+     "active": 23,
+     "nearest_peak_m": 445.2188499999999
+    },
+    {
+     "leak": "p810",
+     "estimate": "p182",
+     "distance_m": 1048.96655,
+     "active": 23,
+     "nearest_peak_m": 312.24825
+    },
+    {
+     "leak": "p654",
+     "estimate": "p182",
+     "distance_m": 1826.5355000000004,
+     "active": 23,
+     "nearest_peak_m": 243.40085000000002
+    },
+    {
+     "leak": "p523",
+     "estimate": "p182",
+     "distance_m": 2635.6337000000003,
+     "active": 6,
+     "nearest_peak_m": 496.14735000000013
+    },
+    {
+     "leak": "p827",
+     "estimate": "p182",
+     "distance_m": 457.59835,
+     "active": 6,
+     "nearest_peak_m": 264.1628
+    },
+    {
+     "leak": "p280",
+     "estimate": "p182",
+     "distance_m": 2571.1205999999997,
+     "active": 21,
+     "nearest_peak_m": 367.3577
+    },
+    {
+     "leak": "p653",
+     "estimate": "p145",
+     "distance_m": 1144.59755,
+     "active": 9,
+     "nearest_peak_m": 299.39515
+    },
+    {
+     "leak": "p710",
+     "estimate": "p182",
+     "distance_m": 890.0539499999999,
+     "active": 21,
+     "nearest_peak_m": 253.49975000000003
+    },
+    {
+     "leak": "p514",
+     "estimate": "p145",
+     "distance_m": 1730.6103,
+     "active": 10,
+     "nearest_peak_m": 201.36
+    },
+    {
+     "leak": "p331",
+     "estimate": "p182",
+     "distance_m": 1918.5244000000002,
+     "active": 21,
+     "nearest_peak_m": 192.392
+    },
+    {
+     "leak": "p193",
+     "estimate": "p182",
+     "distance_m": 620.4968,
+     "active": 20,
+     "nearest_peak_m": 51.218450000000004
+    },
+    {
+     "leak": "p277",
+     "estimate": "p182",
+     "distance_m": 2597.5851,
+     "active": 19,
+     "nearest_peak_m": 393.8222
+    },
+    {
+     "leak": "p142",
+     "estimate": "p182",
+     "distance_m": 1826.6821500000003,
+     "active": 11,
+     "nearest_peak_m": 209.0274
+    },
+    {
+     "leak": "p680",
+     "estimate": "p182",
+     "distance_m": 1528.12535,
+     "active": 19,
+     "nearest_peak_m": 200.69869999999997
+    },
+    {
+     "leak": "p586",
+     "estimate": "p182",
+     "distance_m": 2369.3098,
+     "active": 14,
+     "nearest_peak_m": 564.33945
+    },
+    {
+     "leak": "p721",
+     "estimate": "p182",
+     "distance_m": 1190.3859,
+     "active": 18,
+     "nearest_peak_m": 252.5545
+    },
+    {
+     "leak": "p800",
+     "estimate": "p182",
+     "distance_m": 510.3644,
+     "active": 14,
+     "nearest_peak_m": 74.2862
+    },
+    {
+     "leak": "p123",
+     "estimate": "p182",
+     "distance_m": 1975.75125,
+     "active": 18,
+     "nearest_peak_m": 612.10495
+    },
+    {
+     "leak": "p455",
+     "estimate": "p182",
+     "distance_m": 3018.8097,
+     "active": 16,
+     "nearest_peak_m": 102.70105
+    },
+    {
+     "leak": "p762",
+     "estimate": "p182",
+     "distance_m": 1029.0448999999999,
+     "active": 16,
+     "nearest_peak_m": 347.55979999999994
+    },
+    {
+     "leak": "p426",
+     "estimate": "p182",
+     "distance_m": 1485.4789000000003,
+     "active": 16,
+     "nearest_peak_m": 473.6752
+    },
+    {
+     "leak": "p879",
+     "estimate": "p182",
+     "distance_m": 322.0082499999999,
+     "active": 16,
+     "nearest_peak_m": 322.0082499999999
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p694",
+     "distance_m": 2000.8998000000004,
+     "active": 23,
+     "nearest_peak_m": 105.26315
+    },
+    {
+     "leak": "p427",
+     "estimate": "p694",
+     "distance_m": 592.3199500000001,
+     "active": 23,
+     "nearest_peak_m": 592.3199500000001
+    },
+    {
+     "leak": "p810",
+     "estimate": "p694",
+     "distance_m": 1077.67075,
+     "active": 23,
+     "nearest_peak_m": 1077.67075
+    },
+    {
+     "leak": "p654",
+     "estimate": "p694",
+     "distance_m": 982.8113,
+     "active": 23,
+     "nearest_peak_m": 591.4137499999999
+    },
+    {
+     "leak": "p523",
+     "estimate": "p133",
+     "distance_m": 489.9667,
+     "active": 6,
+     "nearest_peak_m": 489.9667
+    },
+    {
+     "leak": "p827",
+     "estimate": "p164",
+     "distance_m": 762.5402499999999,
+     "active": 6,
+     "nearest_peak_m": 762.5402499999999
+    },
+    {
+     "leak": "p280",
+     "estimate": "p694",
+     "distance_m": 1727.3963999999999,
+     "active": 21,
+     "nearest_peak_m": 542.08805
+    },
+    {
+     "leak": "p653",
+     "estimate": "p698",
+     "distance_m": 867.6518000000001,
+     "active": 9,
+     "nearest_peak_m": 431.91925
+    },
+    {
+     "leak": "p710",
+     "estimate": "p694",
+     "distance_m": 510.93245,
+     "active": 21,
+     "nearest_peak_m": 510.93245
+    },
+    {
+     "leak": "p514",
+     "estimate": "p700",
+     "distance_m": 1558.0746499999998,
+     "active": 10,
+     "nearest_peak_m": 263.81375
+    },
+    {
+     "leak": "p331",
+     "estimate": "p694",
+     "distance_m": 1074.8002000000001,
+     "active": 21,
+     "nearest_peak_m": 362.78745
+    },
+    {
+     "leak": "p193",
+     "estimate": "p695",
+     "distance_m": 1285.9895999999999,
+     "active": 20,
+     "nearest_peak_m": 1285.9895999999999
+    },
+    {
+     "leak": "p277",
+     "estimate": "p695",
+     "distance_m": 1803.7350000000001,
+     "active": 19,
+     "nearest_peak_m": 269.6846
+    },
+    {
+     "leak": "p142",
+     "estimate": "p692",
+     "distance_m": 883.2137499999999,
+     "active": 11,
+     "nearest_peak_m": 440.62919999999997
+    },
+    {
+     "leak": "p680",
+     "estimate": "p695",
+     "distance_m": 734.27525,
+     "active": 19,
+     "nearest_peak_m": 260.77175
+    },
+    {
+     "leak": "p586",
+     "estimate": "p695",
+     "distance_m": 1575.4596999999999,
+     "active": 14,
+     "nearest_peak_m": 168.5159
+    },
+    {
+     "leak": "p721",
+     "estimate": "p695",
+     "distance_m": 620.48,
+     "active": 18,
+     "nearest_peak_m": 252.5545
+    },
+    {
+     "leak": "p800",
+     "estimate": "p726",
+     "distance_m": 622.1896499999999,
+     "active": 14,
+     "nearest_peak_m": 622.1896499999999
+    },
+    {
+     "leak": "p123",
+     "estimate": "p695",
+     "distance_m": 1181.9011500000001,
+     "active": 18,
+     "nearest_peak_m": 212.3571
+    },
+    {
+     "leak": "p455",
+     "estimate": "p695",
+     "distance_m": 2224.9596,
+     "active": 16,
+     "nearest_peak_m": 963.89765
+    },
+    {
+     "leak": "p762",
+     "estimate": "p695",
+     "distance_m": 641.2518,
+     "active": 16,
+     "nearest_peak_m": 640.8329
+    },
+    {
+     "leak": "p426",
+     "estimate": "p695",
+     "distance_m": 691.6288000000001,
+     "active": 16,
+     "nearest_peak_m": 494.6535999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p695",
+     "distance_m": 1115.85835,
+     "active": 16,
+     "nearest_peak_m": 1115.85835
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p802",
+     "distance_m": 2766.2842,
+     "active": 23,
+     "nearest_peak_m": 98.1245
+    },
+    {
+     "leak": "p427",
+     "estimate": "p802",
+     "distance_m": 1357.70435,
+     "active": 23,
+     "nearest_peak_m": 49.43475
+    },
+    {
+     "leak": "p810",
+     "estimate": "p802",
+     "distance_m": 748.45195,
+     "active": 23,
+     "nearest_peak_m": 367.0588
+    },
+    {
+     "leak": "p654",
+     "estimate": "p802",
+     "distance_m": 1748.1957000000002,
+     "active": 23,
+     "nearest_peak_m": 340.96139999999997
+    },
+    {
+     "leak": "p523",
+     "estimate": "p802",
+     "distance_m": 2557.2939,
+     "active": 6,
+     "nearest_peak_m": 2171.1833500000002
+    },
+    {
+     "leak": "p827",
+     "estimate": "p802",
+     "distance_m": 447.04125000000005,
+     "active": 6,
+     "nearest_peak_m": 411.84685
+    },
+    {
+     "leak": "p280",
+     "estimate": "p802",
+     "distance_m": 2492.7808,
+     "active": 21,
+     "nearest_peak_m": 355.6995
+    },
+    {
+     "leak": "p653",
+     "estimate": "p802",
+     "distance_m": 1804.1900000000003,
+     "active": 9,
+     "nearest_peak_m": 284.96709999999996
+    },
+    {
+     "leak": "p710",
+     "estimate": "p802",
+     "distance_m": 811.7141499999999,
+     "active": 21,
+     "nearest_peak_m": 262.0326
+    },
+    {
+     "leak": "p514",
+     "estimate": "p802",
+     "distance_m": 2390.2027500000004,
+     "active": 10,
+     "nearest_peak_m": 420.1341
+    },
+    {
+     "leak": "p331",
+     "estimate": "p835",
+     "distance_m": 1898.9562500000002,
+     "active": 21,
+     "nearest_peak_m": 304.76869999999997
+    },
+    {
+     "leak": "p193",
+     "estimate": "p835",
+     "distance_m": 572.33835,
+     "active": 20,
+     "nearest_peak_m": 224.5266
+    },
+    {
+     "leak": "p277",
+     "estimate": "p835",
+     "distance_m": 2578.01695,
+     "active": 19,
+     "nearest_peak_m": 367.8091
+    },
+    {
+     "leak": "p142",
+     "estimate": "p835",
+     "distance_m": 1807.114,
+     "active": 11,
+     "nearest_peak_m": 160.45655
+    },
+    {
+     "leak": "p680",
+     "estimate": "p835",
+     "distance_m": 1508.5572,
+     "active": 19,
+     "nearest_peak_m": 851.9783499999999
+    },
+    {
+     "leak": "p586",
+     "estimate": "p835",
+     "distance_m": 2349.7416500000004,
+     "active": 14,
+     "nearest_peak_m": 453.97805
+    },
+    {
+     "leak": "p721",
+     "estimate": "p835",
+     "distance_m": 1170.81775,
+     "active": 18,
+     "nearest_peak_m": 382.76715
+    },
+    {
+     "leak": "p800",
+     "estimate": "p835",
+     "distance_m": 100.90854999999999,
+     "active": 14,
+     "nearest_peak_m": 100.90854999999999
+    },
+    {
+     "leak": "p123",
+     "estimate": "p835",
+     "distance_m": 1956.1831,
+     "active": 18,
+     "nearest_peak_m": 274.45185000000004
+    },
+    {
+     "leak": "p455",
+     "estimate": "p835",
+     "distance_m": 2999.24155,
+     "active": 16,
+     "nearest_peak_m": 636.58745
+    },
+    {
+     "leak": "p762",
+     "estimate": "p835",
+     "distance_m": 800.2019499999999,
+     "active": 16,
+     "nearest_peak_m": 36.50615
+    },
+    {
+     "leak": "p426",
+     "estimate": "p835",
+     "distance_m": 1465.9107500000002,
+     "active": 16,
+     "nearest_peak_m": 0.0
+    },
+    {
+     "leak": "p879",
+     "estimate": "p835",
+     "distance_m": 368.4060999999999,
+     "active": 16,
+     "nearest_peak_m": 254.71455
+    }
+   ]
+  },
+  "E3 S48": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p145",
+     "distance_m": 2209.7385500000005,
+     "active": 23,
+     "nearest_peak_m": 202.91684999999998
+    },
+    {
+     "leak": "p427",
+     "estimate": "p145",
+     "distance_m": 801.1587000000001,
+     "active": 23,
+     "nearest_peak_m": 577.0261000000002
+    },
+    {
+     "leak": "p810",
+     "estimate": "p145",
+     "distance_m": 1490.7727,
+     "active": 23,
+     "nearest_peak_m": 334.06185000000005
+    },
+    {
+     "leak": "p654",
+     "estimate": "p145",
+     "distance_m": 1088.60325,
+     "active": 23,
+     "nearest_peak_m": 377.74785
+    },
+    {
+     "leak": "p523",
+     "estimate": "p319",
+     "distance_m": 1269.3795999999998,
+     "active": 6,
+     "nearest_peak_m": 166.33530000000002
+    },
+    {
+     "leak": "p827",
+     "estimate": "p182",
+     "distance_m": 457.59835,
+     "active": 6,
+     "nearest_peak_m": 152.47605
+    },
+    {
+     "leak": "p280",
+     "estimate": "p145",
+     "distance_m": 1936.23515,
+     "active": 21,
+     "nearest_peak_m": 267.4939
+    },
+    {
+     "leak": "p653",
+     "estimate": "p264",
+     "distance_m": 1859.9820000000002,
+     "active": 9,
+     "nearest_peak_m": 1144.59755
+    },
+    {
+     "leak": "p710",
+     "estimate": "p145",
+     "distance_m": 667.0071,
+     "active": 21,
+     "nearest_peak_m": 510.93245
+    },
+    {
+     "leak": "p514",
+     "estimate": "p264",
+     "distance_m": 1353.0349499999995,
+     "active": 10,
+     "nearest_peak_m": 201.36
+    },
+    {
+     "leak": "p331",
+     "estimate": "p145",
+     "distance_m": 1283.63895,
+     "active": 21,
+     "nearest_peak_m": 362.78745
+    },
+    {
+     "leak": "p193",
+     "estimate": "p145",
+     "distance_m": 1946.63715,
+     "active": 20,
+     "nearest_peak_m": 202.47654999999997
+    },
+    {
+     "leak": "p277",
+     "estimate": "p145",
+     "distance_m": 1962.69965,
+     "active": 19,
+     "nearest_peak_m": 308.0968
+    },
+    {
+     "leak": "p142",
+     "estimate": "p145",
+     "distance_m": 1088.7499,
+     "active": 11,
+     "nearest_peak_m": 209.0274
+    },
+    {
+     "leak": "p680",
+     "estimate": "p145",
+     "distance_m": 200.69869999999997,
+     "active": 19,
+     "nearest_peak_m": 200.69869999999997
+    },
+    {
+     "leak": "p586",
+     "estimate": "p145",
+     "distance_m": 1631.37755,
+     "active": 13,
+     "nearest_peak_m": 564.33945
+    },
+    {
+     "leak": "p721",
+     "estimate": "p145",
+     "distance_m": 666.06185,
+     "active": 18,
+     "nearest_peak_m": 516.16185
+    },
+    {
+     "leak": "p800",
+     "estimate": "p145",
+     "distance_m": 1406.2637499999998,
+     "active": 14,
+     "nearest_peak_m": 479.14149999999995
+    },
+    {
+     "leak": "p123",
+     "estimate": "p145",
+     "distance_m": 1237.8190000000002,
+     "active": 17,
+     "nearest_peak_m": 603.6391
+    },
+    {
+     "leak": "p455",
+     "estimate": "p145",
+     "distance_m": 2280.8774500000004,
+     "active": 16,
+     "nearest_peak_m": 607.9865500000001
+    },
+    {
+     "leak": "p762",
+     "estimate": "p145",
+     "distance_m": 1054.3402500000002,
+     "active": 16,
+     "nearest_peak_m": 169.90085000000002
+    },
+    {
+     "leak": "p426",
+     "estimate": "p145",
+     "distance_m": 850.59345,
+     "active": 16,
+     "nearest_peak_m": 540.9825999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p796",
+     "distance_m": 1113.0321999999999,
+     "active": 16,
+     "nearest_peak_m": 322.0082499999999
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p153",
+     "distance_m": 1853.7987000000005,
+     "active": 23,
+     "nearest_peak_m": 202.91684999999998
+    },
+    {
+     "leak": "p427",
+     "estimate": "p153",
+     "distance_m": 445.2188499999999,
+     "active": 23,
+     "nearest_peak_m": 445.2188499999999
+    },
+    {
+     "leak": "p810",
+     "estimate": "p153",
+     "distance_m": 1077.26535,
+     "active": 23,
+     "nearest_peak_m": 457.04845
+    },
+    {
+     "leak": "p654",
+     "estimate": "p153",
+     "distance_m": 732.6634,
+     "active": 23,
+     "nearest_peak_m": 720.281
+    },
+    {
+     "leak": "p523",
+     "estimate": "p165",
+     "distance_m": 2057.2939499999998,
+     "active": 6,
+     "nearest_peak_m": 270.7459
+    },
+    {
+     "leak": "p827",
+     "estimate": "p153",
+     "distance_m": 1217.74855,
+     "active": 6,
+     "nearest_peak_m": 621.3304
+    },
+    {
+     "leak": "p280",
+     "estimate": "p153",
+     "distance_m": 1580.2953000000002,
+     "active": 21,
+     "nearest_peak_m": 355.6995
+    },
+    {
+     "leak": "p653",
+     "estimate": "p153",
+     "distance_m": 788.6577000000001,
+     "active": 9,
+     "nearest_peak_m": 788.6577000000001
+    },
+    {
+     "leak": "p710",
+     "estimate": "p153",
+     "distance_m": 253.49975000000003,
+     "active": 21,
+     "nearest_peak_m": 229.8579
+    },
+    {
+     "leak": "p514",
+     "estimate": "p153",
+     "distance_m": 1374.6704499999998,
+     "active": 10,
+     "nearest_peak_m": 149.67104999999998
+    },
+    {
+     "leak": "p331",
+     "estimate": "p153",
+     "distance_m": 927.6990999999999,
+     "active": 21,
+     "nearest_peak_m": 209.18529999999998
+    },
+    {
+     "leak": "p193",
+     "estimate": "p153",
+     "distance_m": 1533.1298,
+     "active": 20,
+     "nearest_peak_m": 573.44645
+    },
+    {
+     "leak": "p277",
+     "estimate": "p153",
+     "distance_m": 1606.7598,
+     "active": 19,
+     "nearest_peak_m": 341.40205000000003
+    },
+    {
+     "leak": "p142",
+     "estimate": "p153",
+     "distance_m": 732.8100499999999,
+     "active": 11,
+     "nearest_peak_m": 387.3052
+    },
+    {
+     "leak": "p680",
+     "estimate": "p839",
+     "distance_m": 1537.3783999999998,
+     "active": 19,
+     "nearest_peak_m": 175.19615
+    },
+    {
+     "leak": "p586",
+     "estimate": "p171",
+     "distance_m": 2078.5073499999994,
+     "active": 13,
+     "nearest_peak_m": 274.69140000000004
+    },
+    {
+     "leak": "p721",
+     "estimate": "p7",
+     "distance_m": 1933.7051,
+     "active": 18,
+     "nearest_peak_m": 252.5545
+    },
+    {
+     "leak": "p800",
+     "estimate": "p171",
+     "distance_m": 170.32575,
+     "active": 14,
+     "nearest_peak_m": 170.32575
+    },
+    {
+     "leak": "p123",
+     "estimate": "p7",
+     "distance_m": 1080.31795,
+     "active": 17,
+     "nearest_peak_m": 362.94965
+    },
+    {
+     "leak": "p455",
+     "estimate": "p7",
+     "distance_m": 1790.9497,
+     "active": 16,
+     "nearest_peak_m": 565.8052
+    },
+    {
+     "leak": "p762",
+     "estimate": "p7",
+     "distance_m": 2321.9835000000003,
+     "active": 16,
+     "nearest_peak_m": 70.806
+    },
+    {
+     "leak": "p426",
+     "estimate": "p7",
+     "distance_m": 1186.4969999999998,
+     "active": 16,
+     "nearest_peak_m": 494.6535999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p7",
+     "distance_m": 2993.984150000001,
+     "active": 16,
+     "nearest_peak_m": 324.7584
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p319",
+     "distance_m": 582.379,
+     "active": 23,
+     "nearest_peak_m": 202.91684999999998
+    },
+    {
+     "leak": "p427",
+     "estimate": "p319",
+     "distance_m": 826.20085,
+     "active": 23,
+     "nearest_peak_m": 474.72114999999997
+    },
+    {
+     "leak": "p810",
+     "estimate": "p319",
+     "distance_m": 2348.68505,
+     "active": 23,
+     "nearest_peak_m": 435.62160000000006
+    },
+    {
+     "leak": "p654",
+     "estimate": "p319",
+     "distance_m": 1481.1199000000004,
+     "active": 23,
+     "nearest_peak_m": 621.9456
+    },
+    {
+     "leak": "p523",
+     "estimate": "p319",
+     "distance_m": 1269.3795999999998,
+     "active": 6,
+     "nearest_peak_m": 200.45655000000002
+    },
+    {
+     "leak": "p827",
+     "estimate": "p167",
+     "distance_m": 1049.1406499999998,
+     "active": 6,
+     "nearest_peak_m": 50.82835
+    },
+    {
+     "leak": "p280",
+     "estimate": "p319",
+     "distance_m": 308.8756000000001,
+     "active": 21,
+     "nearest_peak_m": 308.8756000000001
+    },
+    {
+     "leak": "p653",
+     "estimate": "p319",
+     "distance_m": 1439.7616,
+     "active": 9,
+     "nearest_peak_m": 872.7189999999999
+    },
+    {
+     "leak": "p710",
+     "estimate": "p319",
+     "distance_m": 1524.9194500000003,
+     "active": 21,
+     "nearest_peak_m": 522.93705
+    },
+    {
+     "leak": "p514",
+     "estimate": "p319",
+     "distance_m": 932.81455,
+     "active": 10,
+     "nearest_peak_m": 678.9959000000001
+    },
+    {
+     "leak": "p331",
+     "estimate": "p319",
+     "distance_m": 730.3056999999999,
+     "active": 21,
+     "nearest_peak_m": 360.36019999999996
+    },
+    {
+     "leak": "p193",
+     "estimate": "p319",
+     "distance_m": 2754.3845000000006,
+     "active": 20,
+     "nearest_peak_m": 51.218450000000004
+    },
+    {
+     "leak": "p277",
+     "estimate": "p319",
+     "distance_m": 335.3401,
+     "active": 19,
+     "nearest_peak_m": 335.3401
+    },
+    {
+     "leak": "p142",
+     "estimate": "p796",
+     "distance_m": 1551.4373,
+     "active": 11,
+     "nearest_peak_m": 416.34065
+    },
+    {
+     "leak": "p680",
+     "estimate": "p319",
+     "distance_m": 1628.74445,
+     "active": 19,
+     "nearest_peak_m": 626.7620499999999
+    },
+    {
+     "leak": "p586",
+     "estimate": "p319",
+     "distance_m": 1012.3370000000001,
+     "active": 13,
+     "nearest_peak_m": 379.10200000000003
+    },
+    {
+     "leak": "p721",
+     "estimate": "p319",
+     "distance_m": 1523.9741999999999,
+     "active": 18,
+     "nearest_peak_m": 417.06699999999995
+    },
+    {
+     "leak": "p800",
+     "estimate": "p319",
+     "distance_m": 2141.7683000000006,
+     "active": 14,
+     "nearest_peak_m": 367.47135
+    },
+    {
+     "leak": "p123",
+     "estimate": "p319",
+     "distance_m": 670.5870499999999,
+     "active": 17,
+     "nearest_peak_m": 316.46205
+    },
+    {
+     "leak": "p455",
+     "estimate": "p319",
+     "distance_m": 1381.2188,
+     "active": 16,
+     "nearest_peak_m": 453.12604999999996
+    },
+    {
+     "leak": "p762",
+     "estimate": "p319",
+     "distance_m": 1912.2526,
+     "active": 16,
+     "nearest_peak_m": 70.806
+    },
+    {
+     "leak": "p426",
+     "estimate": "p319",
+     "distance_m": 776.7660999999999,
+     "active": 16,
+     "nearest_peak_m": 425.28639999999996
+    },
+    {
+     "leak": "p879",
+     "estimate": "p319",
+     "distance_m": 2584.253250000001,
+     "active": 16,
+     "nearest_peak_m": 411.73394999999994
+    }
+   ]
+  },
+  "S24 unseen": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p52",
+     "distance_m": 1350.4281000000003,
+     "active": 23,
+     "nearest_peak_m": 202.91684999999998
+    },
+    {
+     "leak": "p427",
+     "estimate": "p52",
+     "distance_m": 1237.0488499999997,
+     "active": 23,
+     "nearest_peak_m": 246.80325000000002
+    },
+    {
+     "leak": "p810",
+     "estimate": "p52",
+     "distance_m": 2111.8912499999997,
+     "active": 23,
+     "nearest_peak_m": 368.2175000000001
+    },
+    {
+     "leak": "p654",
+     "estimate": "p52",
+     "distance_m": 977.9155999999999,
+     "active": 23,
+     "nearest_peak_m": 420.27570000000003
+    },
+    {
+     "leak": "p523",
+     "estimate": "p319",
+     "distance_m": 1269.3795999999998,
+     "active": 6,
+     "nearest_peak_m": 1127.0041999999999
+    },
+    {
+     "leak": "p827",
+     "estimate": "p319",
+     "distance_m": 2439.0032500000007,
+     "active": 6,
+     "nearest_peak_m": 375.6335
+    },
+    {
+     "leak": "p280",
+     "estimate": "p52",
+     "distance_m": 1076.9247,
+     "active": 21,
+     "nearest_peak_m": 308.8756000000001
+    },
+    {
+     "leak": "p653",
+     "estimate": "p52",
+     "distance_m": 921.9213,
+     "active": 9,
+     "nearest_peak_m": 921.9213
+    },
+    {
+     "leak": "p710",
+     "estimate": "p52",
+     "distance_m": 1288.1256500000002,
+     "active": 21,
+     "nearest_peak_m": 149.55665
+    },
+    {
+     "leak": "p514",
+     "estimate": "p52",
+     "distance_m": 921.5475499999999,
+     "active": 9,
+     "nearest_peak_m": 589.49775
+    },
+    {
+     "leak": "p331",
+     "estimate": "p875",
+     "distance_m": 2231.90755,
+     "active": 21,
+     "nearest_peak_m": 468.3365
+    },
+    {
+     "leak": "p193",
+     "estimate": "p875",
+     "distance_m": 202.47654999999997,
+     "active": 19,
+     "nearest_peak_m": 202.47654999999997
+    },
+    {
+     "leak": "p277",
+     "estimate": "p875",
+     "distance_m": 2910.96825,
+     "active": 19,
+     "nearest_peak_m": 184.9161
+    },
+    {
+     "leak": "p142",
+     "estimate": "p875",
+     "distance_m": 2087.1835,
+     "active": 11,
+     "nearest_peak_m": 573.73485
+    },
+    {
+     "leak": "p680",
+     "estimate": "p875",
+     "distance_m": 1769.2657,
+     "active": 19,
+     "nearest_peak_m": 200.69869999999997
+    },
+    {
+     "leak": "p586",
+     "estimate": "p875",
+     "distance_m": 2629.811149999999,
+     "active": 13,
+     "nearest_peak_m": 669.0202
+    },
+    {
+     "leak": "p721",
+     "estimate": "p875",
+     "distance_m": 1126.2870499999997,
+     "active": 18,
+     "nearest_peak_m": 449.88859999999994
+    },
+    {
+     "leak": "p800",
+     "estimate": "p834",
+     "distance_m": 53.7027,
+     "active": 14,
+     "nearest_peak_m": 53.7027
+    },
+    {
+     "leak": "p123",
+     "estimate": "p875",
+     "distance_m": 2236.2525999999993,
+     "active": 17,
+     "nearest_peak_m": 295.3227
+    },
+    {
+     "leak": "p455",
+     "estimate": "p71",
+     "distance_m": 3500.88845,
+     "active": 16,
+     "nearest_peak_m": 904.53465
+    },
+    {
+     "leak": "p762",
+     "estimate": "p71",
+     "distance_m": 959.8184499999999,
+     "active": 16,
+     "nearest_peak_m": 430.2165999999999
+    },
+    {
+     "leak": "p426",
+     "estimate": "p71",
+     "distance_m": 2020.4394500000005,
+     "active": 16,
+     "nearest_peak_m": 197.3685
+    },
+    {
+     "leak": "p879",
+     "estimate": "p71",
+     "distance_m": 436.42009999999993,
+     "active": 16,
+     "nearest_peak_m": 415.61195
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p567",
+     "distance_m": 1815.5202000000006,
+     "active": 23,
+     "nearest_peak_m": 202.91684999999998
+    },
+    {
+     "leak": "p427",
+     "estimate": "p567",
+     "distance_m": 1687.65645,
+     "active": 23,
+     "nearest_peak_m": 445.2188499999999
+    },
+    {
+     "leak": "p810",
+     "estimate": "p567",
+     "distance_m": 2542.811249999999,
+     "active": 23,
+     "nearest_peak_m": 397.92535
+    },
+    {
+     "leak": "p654",
+     "estimate": "p567",
+     "distance_m": 732.8824999999999,
+     "active": 23,
+     "nearest_peak_m": 353.2527
+    },
+    {
+     "leak": "p523",
+     "estimate": "p567",
+     "distance_m": 324.6331,
+     "active": 6,
+     "nearest_peak_m": 324.6331
+    },
+    {
+     "leak": "p827",
+     "estimate": "p567",
+     "distance_m": 2683.2944499999994,
+     "active": 6,
+     "nearest_peak_m": 355.8281
+    },
+    {
+     "leak": "p280",
+     "estimate": "p567",
+     "distance_m": 1542.0168000000003,
+     "active": 21,
+     "nearest_peak_m": 355.6995
+    },
+    {
+     "leak": "p653",
+     "estimate": "p567",
+     "distance_m": 676.8882,
+     "active": 9,
+     "nearest_peak_m": 676.8882
+    },
+    {
+     "leak": "p710",
+     "estimate": "p567",
+     "distance_m": 1719.04565,
+     "active": 21,
+     "nearest_peak_m": 229.8579
+    },
+    {
+     "leak": "p514",
+     "estimate": "p567",
+     "distance_m": 539.0610500000001,
+     "active": 9,
+     "nearest_peak_m": 237.0846
+    },
+    {
+     "leak": "p331",
+     "estimate": "p567",
+     "distance_m": 1606.2458000000004,
+     "active": 21,
+     "nearest_peak_m": 786.7253999999997
+    },
+    {
+     "leak": "p193",
+     "estimate": "p567",
+     "distance_m": 2998.6756999999993,
+     "active": 19,
+     "nearest_peak_m": 573.44645
+    },
+    {
+     "leak": "p277",
+     "estimate": "p567",
+     "distance_m": 1568.4813000000001,
+     "active": 19,
+     "nearest_peak_m": 57.899100000000004
+    },
+    {
+     "leak": "p142",
+     "estimate": "p567",
+     "distance_m": 836.4201499999998,
+     "active": 11,
+     "nearest_peak_m": 732.8100499999999
+    },
+    {
+     "leak": "p680",
+     "estimate": "p567",
+     "distance_m": 1822.8706499999998,
+     "active": 19,
+     "nearest_peak_m": 175.19615
+    },
+    {
+     "leak": "p586",
+     "estimate": "p567",
+     "distance_m": 220.8042,
+     "active": 13,
+     "nearest_peak_m": 220.8042
+    },
+    {
+     "leak": "p721",
+     "estimate": "p567",
+     "distance_m": 1718.1003999999998,
+     "active": 18,
+     "nearest_peak_m": 252.5545
+    },
+    {
+     "leak": "p800",
+     "estimate": "p567",
+     "distance_m": 2438.9413,
+     "active": 14,
+     "nearest_peak_m": 170.32575
+    },
+    {
+     "leak": "p123",
+     "estimate": "p567",
+     "distance_m": 827.7625499999998,
+     "active": 17,
+     "nearest_peak_m": 212.3571
+    },
+    {
+     "leak": "p455",
+     "estimate": "p567",
+     "distance_m": 691.4091000000001,
+     "active": 16,
+     "nearest_peak_m": 490.4096500000001
+    },
+    {
+     "leak": "p762",
+     "estimate": "p567",
+     "distance_m": 2106.3787999999995,
+     "active": 16,
+     "nearest_peak_m": 405.03435
+    },
+    {
+     "leak": "p426",
+     "estimate": "p567",
+     "distance_m": 1652.7062000000003,
+     "active": 16,
+     "nearest_peak_m": 494.6535999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p567",
+     "distance_m": 2881.426250000001,
+     "active": 16,
+     "nearest_peak_m": 324.7584
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p319",
+     "distance_m": 582.379,
+     "active": 23,
+     "nearest_peak_m": 202.91684999999998
+    },
+    {
+     "leak": "p427",
+     "estimate": "p319",
+     "distance_m": 826.20085,
+     "active": 23,
+     "nearest_peak_m": 246.80325000000002
+    },
+    {
+     "leak": "p810",
+     "estimate": "p319",
+     "distance_m": 2348.68505,
+     "active": 23,
+     "nearest_peak_m": 519.4756000000001
+    },
+    {
+     "leak": "p654",
+     "estimate": "p319",
+     "distance_m": 1481.1199000000004,
+     "active": 23,
+     "nearest_peak_m": 992.8587
+    },
+    {
+     "leak": "p523",
+     "estimate": "p319",
+     "distance_m": 1269.3795999999998,
+     "active": 6,
+     "nearest_peak_m": 1269.3795999999998
+    },
+    {
+     "leak": "p827",
+     "estimate": "p319",
+     "distance_m": 2439.0032500000007,
+     "active": 6,
+     "nearest_peak_m": 50.82835
+    },
+    {
+     "leak": "p280",
+     "estimate": "p319",
+     "distance_m": 308.8756000000001,
+     "active": 21,
+     "nearest_peak_m": 218.00039999999998
+    },
+    {
+     "leak": "p653",
+     "estimate": "p319",
+     "distance_m": 1439.7616,
+     "active": 9,
+     "nearest_peak_m": 1419.9526500000002
+    },
+    {
+     "leak": "p710",
+     "estimate": "p319",
+     "distance_m": 1524.9194500000003,
+     "active": 21,
+     "nearest_peak_m": 177.60375000000002
+    },
+    {
+     "leak": "p514",
+     "estimate": "p319",
+     "distance_m": 932.81455,
+     "active": 9,
+     "nearest_peak_m": 932.81455
+    },
+    {
+     "leak": "p331",
+     "estimate": "p319",
+     "distance_m": 730.3056999999999,
+     "active": 21,
+     "nearest_peak_m": 410.73319999999995
+    },
+    {
+     "leak": "p193",
+     "estimate": "p319",
+     "distance_m": 2754.3845000000006,
+     "active": 19,
+     "nearest_peak_m": 51.218450000000004
+    },
+    {
+     "leak": "p277",
+     "estimate": "p319",
+     "distance_m": 335.3401,
+     "active": 19,
+     "nearest_peak_m": 335.3401
+    },
+    {
+     "leak": "p142",
+     "estimate": "p319",
+     "distance_m": 1091.57515,
+     "active": 11,
+     "nearest_peak_m": 1037.6873999999998
+    },
+    {
+     "leak": "p680",
+     "estimate": "p319",
+     "distance_m": 1628.74445,
+     "active": 19,
+     "nearest_peak_m": 186.17399999999998
+    },
+    {
+     "leak": "p586",
+     "estimate": "p319",
+     "distance_m": 1012.3370000000001,
+     "active": 13,
+     "nearest_peak_m": 1003.4054000000002
+    },
+    {
+     "leak": "p721",
+     "estimate": "p319",
+     "distance_m": 1523.9741999999999,
+     "active": 18,
+     "nearest_peak_m": 178.83259999999999
+    },
+    {
+     "leak": "p800",
+     "estimate": "p319",
+     "distance_m": 2141.7683000000006,
+     "active": 14,
+     "nearest_peak_m": 53.7027
+    },
+    {
+     "leak": "p123",
+     "estimate": "p319",
+     "distance_m": 670.5870499999999,
+     "active": 17,
+     "nearest_peak_m": 661.65545
+    },
+    {
+     "leak": "p455",
+     "estimate": "p319",
+     "distance_m": 1381.2188,
+     "active": 16,
+     "nearest_peak_m": 308.97450000000003
+    },
+    {
+     "leak": "p762",
+     "estimate": "p319",
+     "distance_m": 1912.2526,
+     "active": 16,
+     "nearest_peak_m": 337.53299999999996
+    },
+    {
+     "leak": "p426",
+     "estimate": "p319",
+     "distance_m": 776.7660999999999,
+     "active": 16,
+     "nearest_peak_m": 197.3685
+    },
+    {
+     "leak": "p879",
+     "estimate": "p319",
+     "distance_m": 2584.253250000001,
+     "active": 16,
+     "nearest_peak_m": 411.73394999999994
+    }
+   ]
+  },
+  "S72 unseen": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p58",
+     "distance_m": 2612.0398,
+     "active": 23,
+     "nearest_peak_m": 522.363
+    },
+    {
+     "leak": "p427",
+     "estimate": "p58",
+     "distance_m": 1203.45995,
+     "active": 23,
+     "nearest_peak_m": 523.10995
+    },
+    {
+     "leak": "p810",
+     "estimate": "p58",
+     "distance_m": 335.83435,
+     "active": 23,
+     "nearest_peak_m": 130.715
+    },
+    {
+     "leak": "p654",
+     "estimate": "p58",
+     "distance_m": 1490.9045000000003,
+     "active": 23,
+     "nearest_peak_m": 413.8567
+    },
+    {
+     "leak": "p523",
+     "estimate": "p58",
+     "distance_m": 2300.0026999999995,
+     "active": 6,
+     "nearest_peak_m": 480.94130000000007
+    },
+    {
+     "leak": "p827",
+     "estimate": "p796",
+     "distance_m": 752.1265999999999,
+     "active": 6,
+     "nearest_peak_m": 609.4758999999999
+    },
+    {
+     "leak": "p280",
+     "estimate": "p58",
+     "distance_m": 2338.5364,
+     "active": 21,
+     "nearest_peak_m": 265.82275
+    },
+    {
+     "leak": "p653",
+     "estimate": "p58",
+     "distance_m": 1546.8988000000004,
+     "active": 9,
+     "nearest_peak_m": 357.8624
+    },
+    {
+     "leak": "p710",
+     "estimate": "p58",
+     "distance_m": 634.55935,
+     "active": 21,
+     "nearest_peak_m": 634.55935
+    },
+    {
+     "leak": "p514",
+     "estimate": "p58",
+     "distance_m": 2132.91155,
+     "active": 10,
+     "nearest_peak_m": 144.37625
+    },
+    {
+     "leak": "p331",
+     "estimate": "p58",
+     "distance_m": 1685.9402,
+     "active": 21,
+     "nearest_peak_m": 192.392
+    },
+    {
+     "leak": "p193",
+     "estimate": "p58",
+     "distance_m": 890.3468999999999,
+     "active": 20,
+     "nearest_peak_m": 42.82105
+    },
+    {
+     "leak": "p277",
+     "estimate": "p58",
+     "distance_m": 2365.0009,
+     "active": 19,
+     "nearest_peak_m": 418.4043
+    },
+    {
+     "leak": "p142",
+     "estimate": "p58",
+     "distance_m": 1491.0511500000002,
+     "active": 11,
+     "nearest_peak_m": 315.70444999999995
+    },
+    {
+     "leak": "p680",
+     "estimate": "p58",
+     "distance_m": 1173.13335,
+     "active": 19,
+     "nearest_peak_m": 1173.13335
+    },
+    {
+     "leak": "p586",
+     "estimate": "p58",
+     "distance_m": 2033.6787999999995,
+     "active": 13,
+     "nearest_peak_m": 360.3815
+    },
+    {
+     "leak": "p721",
+     "estimate": "p58",
+     "distance_m": 511.5865,
+     "active": 18,
+     "nearest_peak_m": 511.5865
+    },
+    {
+     "leak": "p800",
+     "estimate": "p58",
+     "distance_m": 747.4562999999999,
+     "active": 14,
+     "nearest_peak_m": 682.00185
+    },
+    {
+     "leak": "p123",
+     "estimate": "p58",
+     "distance_m": 1640.12025,
+     "active": 17,
+     "nearest_peak_m": 240.26364999999998
+    },
+    {
+     "leak": "p455",
+     "estimate": "p58",
+     "distance_m": 2683.178699999999,
+     "active": 16,
+     "nearest_peak_m": 592.7805
+    },
+    {
+     "leak": "p762",
+     "estimate": "p58",
+     "distance_m": 165.32549999999998,
+     "active": 16,
+     "nearest_peak_m": 165.32549999999998
+    },
+    {
+     "leak": "p426",
+     "estimate": "p58",
+     "distance_m": 1252.8947,
+     "active": 16,
+     "nearest_peak_m": 473.6752
+    },
+    {
+     "leak": "p879",
+     "estimate": "p58",
+     "distance_m": 1035.83595,
+     "active": 16,
+     "nearest_peak_m": 436.42009999999993
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p873",
+     "distance_m": 3143.26385,
+     "active": 23,
+     "nearest_peak_m": 202.91684999999998
+    },
+    {
+     "leak": "p427",
+     "estimate": "p873",
+     "distance_m": 1734.6840000000004,
+     "active": 23,
+     "nearest_peak_m": 633.5198000000001
+    },
+    {
+     "leak": "p810",
+     "estimate": "p873",
+     "distance_m": 270.3542,
+     "active": 23,
+     "nearest_peak_m": 270.3542
+    },
+    {
+     "leak": "p654",
+     "estimate": "p873",
+     "distance_m": 2072.2935500000003,
+     "active": 23,
+     "nearest_peak_m": 372.29515
+    },
+    {
+     "leak": "p523",
+     "estimate": "p873",
+     "distance_m": 2881.3917499999993,
+     "active": 6,
+     "nearest_peak_m": 478.4980500000001
+    },
+    {
+     "leak": "p827",
+     "estimate": "p32",
+     "distance_m": 2624.2352,
+     "active": 6,
+     "nearest_peak_m": 473.4968
+    },
+    {
+     "leak": "p280",
+     "estimate": "p873",
+     "distance_m": 2869.7604499999998,
+     "active": 21,
+     "nearest_peak_m": 254.68514999999996
+    },
+    {
+     "leak": "p653",
+     "estimate": "p32",
+     "distance_m": 1624.9935500000001,
+     "active": 9,
+     "nearest_peak_m": 428.28945
+    },
+    {
+     "leak": "p710",
+     "estimate": "p873",
+     "distance_m": 1086.1304,
+     "active": 21,
+     "nearest_peak_m": 548.73485
+    },
+    {
+     "leak": "p514",
+     "estimate": "p873",
+     "distance_m": 2714.3005999999996,
+     "active": 10,
+     "nearest_peak_m": 0.0
+    },
+    {
+     "leak": "p331",
+     "estimate": "p873",
+     "distance_m": 2217.16425,
+     "active": 21,
+     "nearest_peak_m": 362.78745
+    },
+    {
+     "leak": "p193",
+     "estimate": "p873",
+     "distance_m": 300.33985,
+     "active": 20,
+     "nearest_peak_m": 300.33985
+    },
+    {
+     "leak": "p277",
+     "estimate": "p873",
+     "distance_m": 2896.22495,
+     "active": 19,
+     "nearest_peak_m": 335.3401
+    },
+    {
+     "leak": "p142",
+     "estimate": "p319",
+     "distance_m": 1091.57515,
+     "active": 11,
+     "nearest_peak_m": 372.44180000000006
+    },
+    {
+     "leak": "p680",
+     "estimate": "p873",
+     "distance_m": 1754.5224,
+     "active": 19,
+     "nearest_peak_m": 175.19615
+    },
+    {
+     "leak": "p586",
+     "estimate": "p873",
+     "distance_m": 2615.067849999999,
+     "active": 13,
+     "nearest_peak_m": 362.97945000000004
+    },
+    {
+     "leak": "p721",
+     "estimate": "p319",
+     "distance_m": 1523.9741999999999,
+     "active": 18,
+     "nearest_peak_m": 425.762
+    },
+    {
+     "leak": "p800",
+     "estimate": "p873",
+     "distance_m": 753.4991500000001,
+     "active": 14,
+     "nearest_peak_m": 753.4991500000001
+    },
+    {
+     "leak": "p123",
+     "estimate": "p319",
+     "distance_m": 670.5870499999999,
+     "active": 17,
+     "nearest_peak_m": 404.65445
+    },
+    {
+     "leak": "p455",
+     "estimate": "p319",
+     "distance_m": 1381.2188,
+     "active": 16,
+     "nearest_peak_m": 602.4746500000001
+    },
+    {
+     "leak": "p762",
+     "estimate": "p319",
+     "distance_m": 1912.2526,
+     "active": 16,
+     "nearest_peak_m": 347.55979999999994
+    },
+    {
+     "leak": "p426",
+     "estimate": "p319",
+     "distance_m": 776.7660999999999,
+     "active": 16,
+     "nearest_peak_m": 644.0706499999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p319",
+     "distance_m": 2584.253250000001,
+     "active": 16,
+     "nearest_peak_m": 322.0082499999999
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p795",
+     "distance_m": 2634.7169000000004,
+     "active": 23,
+     "nearest_peak_m": 559.99945
+    },
+    {
+     "leak": "p427",
+     "estimate": "p795",
+     "distance_m": 1226.1370499999998,
+     "active": 23,
+     "nearest_peak_m": 525.09415
+    },
+    {
+     "leak": "p810",
+     "estimate": "p795",
+     "distance_m": 334.06185000000005,
+     "active": 23,
+     "nearest_peak_m": 130.715
+    },
+    {
+     "leak": "p654",
+     "estimate": "p795",
+     "distance_m": 1513.5816000000002,
+     "active": 23,
+     "nearest_peak_m": 283.20385
+    },
+    {
+     "leak": "p523",
+     "estimate": "p795",
+     "distance_m": 2322.6798,
+     "active": 6,
+     "nearest_peak_m": 1480.4746499999999
+    },
+    {
+     "leak": "p827",
+     "estimate": "p795",
+     "distance_m": 714.4175499999999,
+     "active": 6,
+     "nearest_peak_m": 434.07860000000005
+    },
+    {
+     "leak": "p280",
+     "estimate": "p795",
+     "distance_m": 2361.2135000000003,
+     "active": 21,
+     "nearest_peak_m": 97.78055
+    },
+    {
+     "leak": "p653",
+     "estimate": "p795",
+     "distance_m": 1569.5759000000003,
+     "active": 9,
+     "nearest_peak_m": 1004.9479499999999
+    },
+    {
+     "leak": "p710",
+     "estimate": "p795",
+     "distance_m": 657.23645,
+     "active": 21,
+     "nearest_peak_m": 253.49975000000003
+    },
+    {
+     "leak": "p514",
+     "estimate": "p795",
+     "distance_m": 2155.58865,
+     "active": 10,
+     "nearest_peak_m": 373.59290000000004
+    },
+    {
+     "leak": "p331",
+     "estimate": "p795",
+     "distance_m": 1708.6173,
+     "active": 21,
+     "nearest_peak_m": 410.73319999999995
+    },
+    {
+     "leak": "p193",
+     "estimate": "p795",
+     "distance_m": 889.0686000000002,
+     "active": 20,
+     "nearest_peak_m": 42.82105
+    },
+    {
+     "leak": "p277",
+     "estimate": "p795",
+     "distance_m": 2387.6780000000003,
+     "active": 19,
+     "nearest_peak_m": 269.6846
+    },
+    {
+     "leak": "p142",
+     "estimate": "p795",
+     "distance_m": 1513.7282500000001,
+     "active": 11,
+     "nearest_peak_m": 315.70444999999995
+    },
+    {
+     "leak": "p680",
+     "estimate": "p795",
+     "distance_m": 1195.81045,
+     "active": 19,
+     "nearest_peak_m": 97.12945
+    },
+    {
+     "leak": "p586",
+     "estimate": "p795",
+     "distance_m": 2056.3558999999996,
+     "active": 13,
+     "nearest_peak_m": 360.3815
+    },
+    {
+     "leak": "p721",
+     "estimate": "p795",
+     "distance_m": 534.2635999999999,
+     "active": 18,
+     "nearest_peak_m": 252.5545
+    },
+    {
+     "leak": "p800",
+     "estimate": "p795",
+     "distance_m": 786.9435000000001,
+     "active": 14,
+     "nearest_peak_m": 170.32575
+    },
+    {
+     "leak": "p123",
+     "estimate": "p795",
+     "distance_m": 1662.7973499999998,
+     "active": 17,
+     "nearest_peak_m": 199.62269999999998
+    },
+    {
+     "leak": "p455",
+     "estimate": "p795",
+     "distance_m": 2705.8557999999994,
+     "active": 16,
+     "nearest_peak_m": 904.53465
+    },
+    {
+     "leak": "p762",
+     "estimate": "p839",
+     "distance_m": 1038.29795,
+     "active": 16,
+     "nearest_peak_m": 188.0026
+    },
+    {
+     "leak": "p426",
+     "estimate": "p839",
+     "distance_m": 1494.73195,
+     "active": 16,
+     "nearest_peak_m": 475.65939999999995
+    },
+    {
+     "leak": "p879",
+     "estimate": "p839",
+     "distance_m": 324.7584,
+     "active": 16,
+     "nearest_peak_m": 324.7584
+    }
+   ]
+  },
+  "S48, 6 sensors failed": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p17",
+     "distance_m": 424.7537000000001,
+     "active": 23,
+     "nearest_peak_m": 424.7537000000001
+    },
+    {
+     "leak": "p427",
+     "estimate": "p17",
+     "distance_m": 1038.07505,
+     "active": 23,
+     "nearest_peak_m": 523.10995
+    },
+    {
+     "leak": "p810",
+     "estimate": "p17",
+     "distance_m": 2560.559249999999,
+     "active": 23,
+     "nearest_peak_m": 334.06185000000005
+    },
+    {
+     "leak": "p654",
+     "estimate": "p17",
+     "distance_m": 1692.9941000000003,
+     "active": 23,
+     "nearest_peak_m": 338.74355
+    },
+    {
+     "leak": "p523",
+     "estimate": "p17",
+     "distance_m": 1481.2537999999997,
+     "active": 6,
+     "nearest_peak_m": 205.07340000000002
+    },
+    {
+     "leak": "p827",
+     "estimate": "p17",
+     "distance_m": 2650.87745,
+     "active": 6,
+     "nearest_peak_m": 152.47605
+    },
+    {
+     "leak": "p280",
+     "estimate": "p17",
+     "distance_m": 112.833,
+     "active": 21,
+     "nearest_peak_m": 112.833
+    },
+    {
+     "leak": "p653",
+     "estimate": "p17",
+     "distance_m": 1651.6358,
+     "active": 9,
+     "nearest_peak_m": 716.9908999999999
+    },
+    {
+     "leak": "p710",
+     "estimate": "p17",
+     "distance_m": 1736.79365,
+     "active": 21,
+     "nearest_peak_m": 461.05835
+    },
+    {
+     "leak": "p514",
+     "estimate": "p17",
+     "distance_m": 1144.6887499999998,
+     "active": 10,
+     "nearest_peak_m": 437.62575000000004
+    },
+    {
+     "leak": "p331",
+     "estimate": "p17",
+     "distance_m": 942.1798999999999,
+     "active": 21,
+     "nearest_peak_m": 192.392
+    },
+    {
+     "leak": "p193",
+     "estimate": "p17",
+     "distance_m": 2966.2587,
+     "active": 20,
+     "nearest_peak_m": 202.47654999999997
+    },
+    {
+     "leak": "p277",
+     "estimate": "p17",
+     "distance_m": 308.0968,
+     "active": 19,
+     "nearest_peak_m": 308.0968
+    },
+    {
+     "leak": "p142",
+     "estimate": "p17",
+     "distance_m": 1303.44935,
+     "active": 11,
+     "nearest_peak_m": 0.0
+    },
+    {
+     "leak": "p680",
+     "estimate": "p17",
+     "distance_m": 1840.61865,
+     "active": 19,
+     "nearest_peak_m": 45.09635
+    },
+    {
+     "leak": "p586",
+     "estimate": "p17",
+     "distance_m": 1224.2111999999997,
+     "active": 13,
+     "nearest_peak_m": 370.43885
+    },
+    {
+     "leak": "p721",
+     "estimate": "p17",
+     "distance_m": 1735.8483999999999,
+     "active": 18,
+     "nearest_peak_m": 343.41605
+    },
+    {
+     "leak": "p800",
+     "estimate": "p17",
+     "distance_m": 2353.6424999999995,
+     "active": 14,
+     "nearest_peak_m": 479.14149999999995
+    },
+    {
+     "leak": "p123",
+     "estimate": "p17",
+     "distance_m": 882.4612499999998,
+     "active": 17,
+     "nearest_peak_m": 384.0318
+    },
+    {
+     "leak": "p455",
+     "estimate": "p17",
+     "distance_m": 1593.0929999999998,
+     "active": 16,
+     "nearest_peak_m": 499.09790000000004
+    },
+    {
+     "leak": "p762",
+     "estimate": "p17",
+     "distance_m": 2124.1267999999995,
+     "active": 16,
+     "nearest_peak_m": 169.90085000000002
+    },
+    {
+     "leak": "p426",
+     "estimate": "p17",
+     "distance_m": 988.6402999999999,
+     "active": 16,
+     "nearest_peak_m": 473.6752
+    },
+    {
+     "leak": "p879",
+     "estimate": "p17",
+     "distance_m": 2796.1274500000004,
+     "active": 16,
+     "nearest_peak_m": 322.0082499999999
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p533",
+     "distance_m": 1288.4793500000005,
+     "active": 23,
+     "nearest_peak_m": 202.91684999999998
+    },
+    {
+     "leak": "p427",
+     "estimate": "p533",
+     "distance_m": 1175.1000999999999,
+     "active": 23,
+     "nearest_peak_m": 323.60835
+    },
+    {
+     "leak": "p810",
+     "estimate": "p533",
+     "distance_m": 2171.5016,
+     "active": 23,
+     "nearest_peak_m": 167.59969999999998
+    },
+    {
+     "leak": "p654",
+     "estimate": "p533",
+     "distance_m": 1037.5259499999997,
+     "active": 23,
+     "nearest_peak_m": 621.9456
+    },
+    {
+     "leak": "p523",
+     "estimate": "p86",
+     "distance_m": 660.95765,
+     "active": 6,
+     "nearest_peak_m": 660.95765
+    },
+    {
+     "leak": "p827",
+     "estimate": "p533",
+     "distance_m": 2311.984800000001,
+     "active": 6,
+     "nearest_peak_m": 569.0117
+    },
+    {
+     "leak": "p280",
+     "estimate": "p533",
+     "distance_m": 1014.97595,
+     "active": 21,
+     "nearest_peak_m": 254.68514999999996
+    },
+    {
+     "leak": "p653",
+     "estimate": "p533",
+     "distance_m": 981.5316499999998,
+     "active": 9,
+     "nearest_peak_m": 788.6577000000001
+    },
+    {
+     "leak": "p710",
+     "estimate": "p533",
+     "distance_m": 1347.7360000000006,
+     "active": 21,
+     "nearest_peak_m": 206.22375
+    },
+    {
+     "leak": "p514",
+     "estimate": "p533",
+     "distance_m": 432.9559,
+     "active": 10,
+     "nearest_peak_m": 432.9559
+    },
+    {
+     "leak": "p331",
+     "estimate": "p533",
+     "distance_m": 1079.20495,
+     "active": 21,
+     "nearest_peak_m": 209.18529999999998
+    },
+    {
+     "leak": "p193",
+     "estimate": "p533",
+     "distance_m": 2627.366050000001,
+     "active": 20,
+     "nearest_peak_m": 375.05709999999993
+    },
+    {
+     "leak": "p277",
+     "estimate": "p533",
+     "distance_m": 1041.44045,
+     "active": 19,
+     "nearest_peak_m": 57.899100000000004
+    },
+    {
+     "leak": "p142",
+     "estimate": "p533",
+     "distance_m": 633.3451999999999,
+     "active": 11,
+     "nearest_peak_m": 633.3451999999999
+    },
+    {
+     "leak": "p680",
+     "estimate": "p533",
+     "distance_m": 1451.5610000000001,
+     "active": 19,
+     "nearest_peak_m": 175.19615
+    },
+    {
+     "leak": "p586",
+     "estimate": "p533",
+     "distance_m": 453.99675,
+     "active": 13,
+     "nearest_peak_m": 453.99675
+    },
+    {
+     "leak": "p721",
+     "estimate": "p533",
+     "distance_m": 1346.7907500000001,
+     "active": 18,
+     "nearest_peak_m": 298.9008
+    },
+    {
+     "leak": "p800",
+     "estimate": "p533",
+     "distance_m": 2067.6316500000003,
+     "active": 14,
+     "nearest_peak_m": 180.61185
+    },
+    {
+     "leak": "p123",
+     "estimate": "p533",
+     "distance_m": 212.3571,
+     "active": 17,
+     "nearest_peak_m": 212.3571
+    },
+    {
+     "leak": "p455",
+     "estimate": "p533",
+     "distance_m": 963.89765,
+     "active": 16,
+     "nearest_peak_m": 963.89765
+    },
+    {
+     "leak": "p762",
+     "estimate": "p533",
+     "distance_m": 1735.0691500000003,
+     "active": 16,
+     "nearest_peak_m": 156.3219
+    },
+    {
+     "leak": "p426",
+     "estimate": "p533",
+     "distance_m": 1125.66535,
+     "active": 16,
+     "nearest_peak_m": 540.9825999999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p533",
+     "distance_m": 2510.1166000000007,
+     "active": 16,
+     "nearest_peak_m": 615.9687500000001
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p319",
+     "distance_m": 582.379,
+     "active": 23,
+     "nearest_peak_m": 146.1322
+    },
+    {
+     "leak": "p427",
+     "estimate": "p319",
+     "distance_m": 826.20085,
+     "active": 23,
+     "nearest_peak_m": 482.48025
+    },
+    {
+     "leak": "p810",
+     "estimate": "p319",
+     "distance_m": 2348.68505,
+     "active": 23,
+     "nearest_peak_m": 334.06185000000005
+    },
+    {
+     "leak": "p654",
+     "estimate": "p319",
+     "distance_m": 1481.1199000000004,
+     "active": 23,
+     "nearest_peak_m": 476.33705
+    },
+    {
+     "leak": "p523",
+     "estimate": "p319",
+     "distance_m": 1269.3795999999998,
+     "active": 6,
+     "nearest_peak_m": 322.62685000000005
+    },
+    {
+     "leak": "p827",
+     "estimate": "p167",
+     "distance_m": 1049.1406499999998,
+     "active": 6,
+     "nearest_peak_m": 50.82835
+    },
+    {
+     "leak": "p280",
+     "estimate": "p795",
+     "distance_m": 2361.2135000000003,
+     "active": 21,
+     "nearest_peak_m": 308.8756000000001
+    },
+    {
+     "leak": "p653",
+     "estimate": "p796",
+     "distance_m": 1607.2849500000002,
+     "active": 9,
+     "nearest_peak_m": 834.8904499999999
+    },
+    {
+     "leak": "p710",
+     "estimate": "p795",
+     "distance_m": 657.23645,
+     "active": 21,
+     "nearest_peak_m": 377.7952
+    },
+    {
+     "leak": "p514",
+     "estimate": "p796",
+     "distance_m": 2193.2977,
+     "active": 10,
+     "nearest_peak_m": 288.21285
+    },
+    {
+     "leak": "p331",
+     "estimate": "p795",
+     "distance_m": 1708.6173,
+     "active": 21,
+     "nearest_peak_m": 0.0
+    },
+    {
+     "leak": "p193",
+     "estimate": "p319",
+     "distance_m": 2754.3845000000006,
+     "active": 20,
+     "nearest_peak_m": 51.218450000000004
+    },
+    {
+     "leak": "p277",
+     "estimate": "p319",
+     "distance_m": 335.3401,
+     "active": 19,
+     "nearest_peak_m": 335.3401
+    },
+    {
+     "leak": "p142",
+     "estimate": "p796",
+     "distance_m": 1551.4373,
+     "active": 11,
+     "nearest_peak_m": 949.7440999999999
+    },
+    {
+     "leak": "p680",
+     "estimate": "p319",
+     "distance_m": 1628.74445,
+     "active": 19,
+     "nearest_peak_m": 626.7620499999999
+    },
+    {
+     "leak": "p586",
+     "estimate": "p319",
+     "distance_m": 1012.3370000000001,
+     "active": 13,
+     "nearest_peak_m": 378.80645
+    },
+    {
+     "leak": "p721",
+     "estimate": "p319",
+     "distance_m": 1523.9741999999999,
+     "active": 18,
+     "nearest_peak_m": 302.8653
+    },
+    {
+     "leak": "p800",
+     "estimate": "p319",
+     "distance_m": 2141.7683000000006,
+     "active": 14,
+     "nearest_peak_m": 499.41955
+    },
+    {
+     "leak": "p123",
+     "estimate": "p319",
+     "distance_m": 670.5870499999999,
+     "active": 17,
+     "nearest_peak_m": 427.71985
+    },
+    {
+     "leak": "p455",
+     "estimate": "p319",
+     "distance_m": 1381.2188,
+     "active": 16,
+     "nearest_peak_m": 136.14544999999998
+    },
+    {
+     "leak": "p762",
+     "estimate": "p319",
+     "distance_m": 1912.2526,
+     "active": 16,
+     "nearest_peak_m": 188.0026
+    },
+    {
+     "leak": "p426",
+     "estimate": "p337",
+     "distance_m": 792.6642,
+     "active": 16,
+     "nearest_peak_m": 194.06780000000003
+    },
+    {
+     "leak": "p879",
+     "estimate": "p319",
+     "distance_m": 2584.253250000001,
+     "active": 16,
+     "nearest_peak_m": 182.9259
+    }
+   ]
+  },
+  "Continuous, 6 sensors failed": {
+   "GNN": [
+    {
+     "leak": "p257",
+     "estimate": "p182",
+     "distance_m": 2844.624,
+     "active": 23,
+     "nearest_peak_m": 98.1245
+    },
+    {
+     "leak": "p427",
+     "estimate": "p182",
+     "distance_m": 1436.0441500000002,
+     "active": 23,
+     "nearest_peak_m": 445.2188499999999
+    },
+    {
+     "leak": "p810",
+     "estimate": "p182",
+     "distance_m": 1048.96655,
+     "active": 23,
+     "nearest_peak_m": 312.24825
+    },
+    {
+     "leak": "p654",
+     "estimate": "p182",
+     "distance_m": 1826.5355000000004,
+     "active": 23,
+     "nearest_peak_m": 243.40085000000002
+    },
+    {
+     "leak": "p523",
+     "estimate": "p182",
+     "distance_m": 2635.6337000000003,
+     "active": 6,
+     "nearest_peak_m": 592.3655999999999
+    },
+    {
+     "leak": "p827",
+     "estimate": "p182",
+     "distance_m": 457.59835,
+     "active": 6,
+     "nearest_peak_m": 264.1628
+    },
+    {
+     "leak": "p280",
+     "estimate": "p182",
+     "distance_m": 2571.1205999999997,
+     "active": 21,
+     "nearest_peak_m": 211.96254999999996
+    },
+    {
+     "leak": "p653",
+     "estimate": "p76",
+     "distance_m": 1079.6301000000003,
+     "active": 9,
+     "nearest_peak_m": 299.39515
+    },
+    {
+     "leak": "p710",
+     "estimate": "p182",
+     "distance_m": 890.0539499999999,
+     "active": 21,
+     "nearest_peak_m": 253.49975000000003
+    },
+    {
+     "leak": "p514",
+     "estimate": "p76",
+     "distance_m": 1665.6428500000002,
+     "active": 10,
+     "nearest_peak_m": 201.36
+    },
+    {
+     "leak": "p331",
+     "estimate": "p182",
+     "distance_m": 1918.5244000000002,
+     "active": 21,
+     "nearest_peak_m": 192.392
+    },
+    {
+     "leak": "p193",
+     "estimate": "p182",
+     "distance_m": 620.4968,
+     "active": 20,
+     "nearest_peak_m": 51.218450000000004
+    },
+    {
+     "leak": "p277",
+     "estimate": "p182",
+     "distance_m": 2597.5851,
+     "active": 19,
+     "nearest_peak_m": 367.8091
+    },
+    {
+     "leak": "p142",
+     "estimate": "p182",
+     "distance_m": 1826.6821500000003,
+     "active": 11,
+     "nearest_peak_m": 209.0274
+    },
+    {
+     "leak": "p680",
+     "estimate": "p182",
+     "distance_m": 1528.12535,
+     "active": 19,
+     "nearest_peak_m": 66.35235
+    },
+    {
+     "leak": "p586",
+     "estimate": "p182",
+     "distance_m": 2369.3098,
+     "active": 14,
+     "nearest_peak_m": 474.40000000000003
+    },
+    {
+     "leak": "p721",
+     "estimate": "p182",
+     "distance_m": 1190.3859,
+     "active": 18,
+     "nearest_peak_m": 252.5545
+    },
+    {
+     "leak": "p800",
+     "estimate": "p182",
+     "distance_m": 510.3644,
+     "active": 14,
+     "nearest_peak_m": 74.2862
+    },
+    {
+     "leak": "p123",
+     "estimate": "p182",
+     "distance_m": 1975.75125,
+     "active": 18,
+     "nearest_peak_m": 283.1448
+    },
+    {
+     "leak": "p455",
+     "estimate": "p182",
+     "distance_m": 3018.8097,
+     "active": 16,
+     "nearest_peak_m": 102.70105
+    },
+    {
+     "leak": "p762",
+     "estimate": "p182",
+     "distance_m": 1029.0448999999999,
+     "active": 16,
+     "nearest_peak_m": 482.11609999999996
+    },
+    {
+     "leak": "p426",
+     "estimate": "p182",
+     "distance_m": 1485.4789000000003,
+     "active": 16,
+     "nearest_peak_m": 473.6752
+    },
+    {
+     "leak": "p879",
+     "estimate": "p182",
+     "distance_m": 322.0082499999999,
+     "active": 16,
+     "nearest_peak_m": 322.0082499999999
+    }
+   ],
+   "Ridge": [
+    {
+     "leak": "p257",
+     "estimate": "p694",
+     "distance_m": 2000.8998000000004,
+     "active": 23,
+     "nearest_peak_m": 160.14245
+    },
+    {
+     "leak": "p427",
+     "estimate": "p694",
+     "distance_m": 592.3199500000001,
+     "active": 23,
+     "nearest_peak_m": 592.3199500000001
+    },
+    {
+     "leak": "p810",
+     "estimate": "p694",
+     "distance_m": 1077.67075,
+     "active": 23,
+     "nearest_peak_m": 1077.67075
+    },
+    {
+     "leak": "p654",
+     "estimate": "p694",
+     "distance_m": 982.8113,
+     "active": 23,
+     "nearest_peak_m": 591.4137499999999
+    },
+    {
+     "leak": "p523",
+     "estimate": "p726",
+     "distance_m": 1892.9673500000001,
+     "active": 6,
+     "nearest_peak_m": 562.7738999999999
+    },
+    {
+     "leak": "p827",
+     "estimate": "p727",
+     "distance_m": 866.9272000000001,
+     "active": 6,
+     "nearest_peak_m": 866.9272000000001
+    },
+    {
+     "leak": "p280",
+     "estimate": "p694",
+     "distance_m": 1727.3963999999999,
+     "active": 21,
+     "nearest_peak_m": 542.08805
+    },
+    {
+     "leak": "p653",
+     "estimate": "p693",
+     "distance_m": 988.9315000000001,
+     "active": 9,
+     "nearest_peak_m": 357.8624
+    },
+    {
+     "leak": "p710",
+     "estimate": "p694",
+     "distance_m": 510.93245,
+     "active": 21,
+     "nearest_peak_m": 510.93245
+    },
+    {
+     "leak": "p514",
+     "estimate": "p693",
+     "distance_m": 1574.94425,
+     "active": 10,
+     "nearest_peak_m": 469.30355000000003
+    },
+    {
+     "leak": "p331",
+     "estimate": "p694",
+     "distance_m": 1074.8002000000001,
+     "active": 21,
+     "nearest_peak_m": 362.78745
+    },
+    {
+     "leak": "p193",
+     "estimate": "p694",
+     "distance_m": 1335.8636999999999,
+     "active": 20,
+     "nearest_peak_m": 1335.8636999999999
+    },
+    {
+     "leak": "p277",
+     "estimate": "p694",
+     "distance_m": 1753.8609,
+     "active": 19,
+     "nearest_peak_m": 219.30665000000002
+    },
+    {
+     "leak": "p142",
+     "estimate": "p693",
+     "distance_m": 933.08385,
+     "active": 11,
+     "nearest_peak_m": 371.33034999999995
+    },
+    {
+     "leak": "p680",
+     "estimate": "p695",
+     "distance_m": 734.27525,
+     "active": 19,
+     "nearest_peak_m": 260.77175
+    },
+    {
+     "leak": "p586",
+     "estimate": "p695",
+     "distance_m": 1575.4596999999999,
+     "active": 14,
+     "nearest_peak_m": 370.43885
+    },
+    {
+     "leak": "p721",
+     "estimate": "p695",
+     "distance_m": 620.48,
+     "active": 18,
+     "nearest_peak_m": 620.48
+    },
+    {
+     "leak": "p800",
+     "estimate": "p695",
+     "distance_m": 673.3734000000002,
+     "active": 14,
+     "nearest_peak_m": 673.3734000000002
+    },
+    {
+     "leak": "p123",
+     "estimate": "p695",
+     "distance_m": 1181.9011500000001,
+     "active": 18,
+     "nearest_peak_m": 212.3571
+    },
+    {
+     "leak": "p455",
+     "estimate": "p695",
+     "distance_m": 2224.9596,
+     "active": 16,
+     "nearest_peak_m": 963.89765
+    },
+    {
+     "leak": "p762",
+     "estimate": "p695",
+     "distance_m": 641.2518,
+     "active": 16,
+     "nearest_peak_m": 641.2518
+    },
+    {
+     "leak": "p426",
+     "estimate": "p695",
+     "distance_m": 691.6288000000001,
+     "active": 16,
+     "nearest_peak_m": 644.0706499999999
+    },
+    {
+     "leak": "p879",
+     "estimate": "p695",
+     "distance_m": 1115.85835,
+     "active": 16,
+     "nearest_peak_m": 1115.85835
+    }
+   ],
+   "MLP": [
+    {
+     "leak": "p257",
+     "estimate": "p802",
+     "distance_m": 2766.2842,
+     "active": 23,
+     "nearest_peak_m": 202.91684999999998
+    },
+    {
+     "leak": "p427",
+     "estimate": "p802",
+     "distance_m": 1357.70435,
+     "active": 23,
+     "nearest_peak_m": 49.43475
+    },
+    {
+     "leak": "p810",
+     "estimate": "p802",
+     "distance_m": 748.45195,
+     "active": 23,
+     "nearest_peak_m": 141.0458
+    },
+    {
+     "leak": "p654",
+     "estimate": "p802",
+     "distance_m": 1748.1957000000002,
+     "active": 23,
+     "nearest_peak_m": 340.96139999999997
+    },
+    {
+     "leak": "p523",
+     "estimate": "p331",
+     "distance_m": 1642.4841999999999,
+     "active": 6,
+     "nearest_peak_m": 1074.359
+    },
+    {
+     "leak": "p827",
+     "estimate": "p802",
+     "distance_m": 447.04125000000005,
+     "active": 6,
+     "nearest_peak_m": 447.04125000000005
+    },
+    {
+     "leak": "p280",
+     "estimate": "p802",
+     "distance_m": 2492.7808,
+     "active": 21,
+     "nearest_peak_m": 740.5035500000001
+    },
+    {
+     "leak": "p653",
+     "estimate": "p802",
+     "distance_m": 1804.1900000000003,
+     "active": 9,
+     "nearest_peak_m": 872.7189999999999
+    },
+    {
+     "leak": "p710",
+     "estimate": "p802",
+     "distance_m": 811.7141499999999,
+     "active": 21,
+     "nearest_peak_m": 262.0326
+    },
+    {
+     "leak": "p514",
+     "estimate": "p802",
+     "distance_m": 2390.2027500000004,
+     "active": 10,
+     "nearest_peak_m": 381.8930500000001
+    },
+    {
+     "leak": "p331",
+     "estimate": "p843",
+     "distance_m": 1973.99475,
+     "active": 21,
+     "nearest_peak_m": 304.76869999999997
+    },
+    {
+     "leak": "p193",
+     "estimate": "p843",
+     "distance_m": 442.80145,
+     "active": 20,
+     "nearest_peak_m": 224.5266
+    },
+    {
+     "leak": "p277",
+     "estimate": "p843",
+     "distance_m": 2653.05545,
+     "active": 19,
+     "nearest_peak_m": 777.0829000000001
+    },
+    {
+     "leak": "p142",
+     "estimate": "p835",
+     "distance_m": 1807.114,
+     "active": 11,
+     "nearest_peak_m": 160.45655
+    },
+    {
+     "leak": "p680",
+     "estimate": "p843",
+     "distance_m": 1511.3529,
+     "active": 19,
+     "nearest_peak_m": 851.9783499999999
+    },
+    {
+     "leak": "p586",
+     "estimate": "p843",
+     "distance_m": 2371.89835,
+     "active": 14,
+     "nearest_peak_m": 134.87095
+    },
+    {
+     "leak": "p721",
+     "estimate": "p843",
+     "distance_m": 868.3742500000001,
+     "active": 18,
+     "nearest_peak_m": 382.76715
+    },
+    {
+     "leak": "p800",
+     "estimate": "p843",
+     "distance_m": 510.32964999999996,
+     "active": 14,
+     "nearest_peak_m": 222.74980000000002
+    },
+    {
+     "leak": "p123",
+     "estimate": "p843",
+     "distance_m": 1978.3398,
+     "active": 18,
+     "nearest_peak_m": 274.45185000000004
+    },
+    {
+     "leak": "p455",
+     "estimate": "p843",
+     "distance_m": 3021.3982499999997,
+     "active": 16,
+     "nearest_peak_m": 506.81590000000006
+    },
+    {
+     "leak": "p762",
+     "estimate": "p843",
+     "distance_m": 474.19595,
+     "active": 16,
+     "nearest_peak_m": 36.50615
+    },
+    {
+     "leak": "p426",
+     "estimate": "p843",
+     "distance_m": 1540.9492500000003,
+     "active": 16,
+     "nearest_peak_m": 0.0
+    },
+    {
+     "leak": "p879",
+     "estimate": "p843",
+     "distance_m": 596.7878000000001,
+     "active": 16,
+     "nearest_peak_m": 254.71455
+    }
+   ]
+  }
+ }
+}

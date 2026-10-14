@@ -38,14 +38,19 @@ class ChebConv(torch.nn.Module):
 
 
 class Reconstructor(torch.nn.Module):
-    def __init__(self, edge_index, n, in_channels=11, hidden=64, layers=4, order=10):
+    def __init__(self, edge_index, n, in_channels=11, hidden=64, layers=4, order=10, embed=0):
         super().__init__()
         self.register_buffer("lap", scaled_laplacian(edge_index, n).to_dense().to_sparse_csr(), persistent=False)
-        dims = [in_channels] + [hidden] * layers
+        # optional learned identity of each node, so that the network can keep a
+        # per-node offset in addition to what it infers from its neighbourhood
+        self.embed = torch.nn.Parameter(0.1 * torch.randn(n, embed)) if embed else None
+        dims = [in_channels + embed] + [hidden] * layers
         self.convs = torch.nn.ModuleList(ChebConv(a, b, order) for a, b in zip(dims[:-1], dims[1:]))
         self.out = torch.nn.Linear(hidden, 1)
 
     def forward(self, x):                            # x: [batch, nodes, features]
+        if self.embed is not None:
+            x = torch.cat([x, self.embed.expand(x.shape[0], -1, -1)], dim=-1)
         for conv in self.convs:
             x = torch.relu(conv(x, self.lap))
         return self.out(x).squeeze(-1)               # [batch, nodes]

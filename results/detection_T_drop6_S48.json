@@ -1,0 +1,58 @@
+{
+ "GNN": {
+  "kappa": 2.0,
+  "h": 50,
+  "mute_radius_m": 600.0,
+  "calm_hours": 24,
+  "validation_2018": {
+   "score": 949.637,
+   "max_score": 89542.734,
+   "relative": 0.011,
+   "TP": 1.0,
+   "FP": 6.0,
+   "FN": 13.0,
+   "leaks": 14.0,
+   "TPR": 0.071
+  },
+  "test_2019": {
+   "score": -19418.753,
+   "max_score": 220524.805,
+   "relative": -0.088,
+   "TP": 4.0,
+   "FP": 92.0,
+   "FN": 19.0,
+   "leaks": 23.0,
+   "TPR": 0.174
+  },
+  "median_hours_to_detection": 42.0,
+  "median_distance_m": 161.9
+ },
+ "Ridge": {
+  "kappa": 0.5,
+  "h": 50,
+  "mute_radius_m": 1200.0,
+  "calm_hours": 168,
+  "validation_2018": {
+   "score": 24289.112,
+   "max_score": 89542.734,
+   "relative": 0.271,
+   "TP": 3.0,
+   "FP": 25.0,
+   "FN": 11.0,
+   "leaks": 14.0,
+   "TPR": 0.214
+  },
+  "test_2019": {
+   "score": -465808.127,
+   "max_score": 220524.805,
+   "relative": -2.112,
+   "TP": 18.0,
+   "FP": 1279.0,
+   "FN": 5.0,
+   "leaks": 23.0,
+   "TPR": 0.783
+  },
+  "median_hours_to_detection": 108.8,
+  "median_distance_m": 202.8
+ }
+}

@@ -22,6 +22,10 @@ ap.add_argument("--batch", type=int, default=32)
 ap.add_argument("--seed", type=int, default=0)
 ap.add_argument("--aware", action="store_true", help="give the model the supply state")
 ap.add_argument("--hide", action="store_true", help="hide one sensor group per sample (for detection)")
+ap.add_argument("--order", type=int, default=10); ap.add_argument("--layers", type=int, default=4)
+ap.add_argument("--hidden", type=int, default=64); ap.add_argument("--lr", type=float, default=2e-3)
+ap.add_argument("--embed", type=int, default=0, help="size of the learned node embedding")
+ap.add_argument("--wd", type=float, default=0.0, help="weight decay")
 ap.add_argument("--months", type=int, default=0, help="train on this many months from 1 February only (0: all, to October)")
 args = ap.parse_args()
 torch.manual_seed(args.seed); rng = np.random.default_rng(args.seed)
@@ -53,10 +57,12 @@ def batch_of(idx):
     return x, torch.tensor((run["truth"][idx] - MU) / SD), torch.tensor(run["live"][idx] & g.IS_JUNCTION)
 
 
-model = Reconstructor(g.EDGE_INDEX, g.N, in_channels=13 if args.aware else 11)
-opt = torch.optim.Adam(model.parameters(), lr=2e-3)
+cfg = dict(in_channels=13 if args.aware else 11, hidden=args.hidden, layers=args.layers, order=args.order, embed=args.embed)
+json.dump(cfg | dict(lr=args.lr, wd=args.wd, epochs=args.epochs), open(MODELS / f"config_{args.tag}.json", "w"))
+model = Reconstructor(g.EDGE_INDEX, g.N, **cfg)
+opt = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.wd)
 steps = args.epochs * (args.samples // args.batch)
-sched = torch.optim.lr_scheduler.OneCycleLR(opt, max_lr=2e-3, total_steps=steps)
+sched = torch.optim.lr_scheduler.OneCycleLR(opt, max_lr=args.lr, total_steps=steps)
 
 
 def evaluate():
@@ -87,7 +93,7 @@ for epoch in range(args.epochs):
 torch.save(model.state_dict(), MODELS / f"reconstructor_{args.tag}.pt")
 gnn_err = evaluate()
 
-summary = dict(run=args.run, epochs=args.epochs, samples_per_epoch=args.samples, aware=args.aware,
+summary = dict(run=args.run, config=cfg, lr=args.lr, wd=args.wd, epochs=args.epochs, samples_per_epoch=args.samples, aware=args.aware,
                training_minutes=round(history[-1]["minutes"], 1),
                parameters=sum(p.numel() for p in model.parameters()),
                gnn_mae_unmonitored_m=round(float(np.nanmean(gnn_err[:, g.UNMONITORED])), 3),

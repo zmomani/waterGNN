@@ -11,7 +11,7 @@ The expected pressure is obtained as in detection: one group of 11 sensors is
 hidden at a time and the three estimates are averaged. Results are written to
 results/robustness_<test>.json.
 """
-import json, sys
+import json, os, sys
 import numpy as np
 import torch
 import gnn_data as g
@@ -19,6 +19,7 @@ from gnn_model import Reconstructor
 from common import *
 
 MODELS, RES = ROOT / "models", ROOT / "results"
+SET = os.environ.get("GNN_SET", "hide")            # which trained GNNs: "hide" (original) or "tuned"
 J = np.flatnonzero(g.IS_JUNCTION)
 U = g.UNMONITORED[J]
 GROUP_OF = np.where(g.ALWAYS[J], -1, g.SECTOR[J])
@@ -53,8 +54,8 @@ def norm(tag):
 
 def gnn_expected(tag, run, idx, aware=False, dead=None):
     MU, SD = norm(tag)
-    model = Reconstructor(g.EDGE_INDEX, g.N, in_channels=13 if aware else 11)
-    model.load_state_dict(torch.load(MODELS / f"reconstructor_{tag}.pt")); model.eval()
+    from gnn_load import load_model
+    model = load_model(tag, aware)
     out = []
     with torch.no_grad():
         for i in range(0, len(idx), 64):
@@ -135,7 +136,7 @@ def mlp_expected(net, run, idx, MU, SD, dead=None):
 
 def mlp():
     out = dict(sensors={}, schedule={}, months={})
-    for regime, tag in (("CWS", "cws_hide"), ("S48", "s48_hide")):
+    for regime, tag in (("CWS", f"cws_{SET}"), ("S48", f"s48_{SET}")):
         run = load(regime); MU, SD = norm(tag); te = test_rows(run)
         net = fit_mlp(run, train_rows(run), MU, SD); res = {}
         for k in (0, 3, 6, 11, 16):
@@ -164,12 +165,12 @@ def mae(est, run, idx, MU, SD):
 
 
 def save(name, obj):
-    (RES / f"robustness_{name}.json").write_text(json.dumps(obj, indent=1)); print(json.dumps(obj, indent=1))
+    (RES / f"robustness_{name}{'' if SET == 'hide' else '_' + SET}.json").write_text(json.dumps(obj, indent=1)); print(json.dumps(obj, indent=1))
 
 
 def sensors():
     out = {}
-    for regime, tag in (("CWS", "cws_hide"), ("S48", "s48_hide")):
+    for regime, tag in (("CWS", f"cws_{SET}"), ("S48", f"s48_{SET}")):
         run = load(regime); MU, SD = norm(tag); te = test_rows(run); tr = train_rows(run)
         maps = fit_ridge(run, tr, MU, SD)
         res = {}
@@ -190,7 +191,7 @@ def sensors():
 
 def schedule():
     out = {}
-    cases = [("S48", "s48_hide", False), ("S48", "s48_aware", True), ("S24", "s24_hide", False), ("S72", "s72_hide", False)]
+    cases = [("S48", f"s48_{SET}", False)] + ([("S48", "s48_aware", True)] if SET == "hide" else [])
     for trained_on, tag, aware in cases:
         if not (MODELS / f"reconstructor_{tag}.pt").exists():
             continue

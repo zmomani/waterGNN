@@ -1,0 +1,107 @@
+{
+ "summary": {
+  "run": "intermittent_S48_noleak",
+  "config": {
+   "in_channels": 11,
+   "hidden": 128,
+   "layers": 4,
+   "order": 10,
+   "embed": 64
+  },
+  "lr": 0.002,
+  "wd": 0.0,
+  "epochs": 12,
+  "samples_per_epoch": 2500,
+  "aware": false,
+  "training_minutes": 16.7,
+  "parameters": 697153,
+  "gnn_mae_unmonitored_m": 0.364,
+  "gnn_p95_m": 1.302
+ },
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 0.7219221187740874,
+   "val_mae_unmonitored_m": 1.6442223776160299,
+   "val_mae_sensors_m": 1.630889637292372,
+   "minutes": 1.377142882347107
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.3515603654578883,
+   "val_mae_unmonitored_m": 1.1690019636835796,
+   "val_mae_sensors_m": 1.2131178316448534,
+   "minutes": 2.75196297566096
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.30776260279136924,
+   "val_mae_unmonitored_m": 0.9651117646276989,
+   "val_mae_sensors_m": 0.9561744013836935,
+   "minutes": 4.202420655886332
+  },
+  {
+   "epoch": 4,
+   "train_loss": 0.20700168507168512,
+   "val_mae_unmonitored_m": 0.745672426227382,
+   "val_mae_sensors_m": 0.7486757236489947,
+   "minutes": 5.6301481088002525
+  },
+  {
+   "epoch": 5,
+   "train_loss": 0.15050881422523568,
+   "val_mae_unmonitored_m": 0.9240979701689019,
+   "val_mae_sensors_m": 0.8564465724715715,
+   "minutes": 7.023186421394348
+  },
+  {
+   "epoch": 6,
+   "train_loss": 0.11864149061243584,
+   "val_mae_unmonitored_m": 0.5540729428459518,
+   "val_mae_sensors_m": 0.5822115273063685,
+   "minutes": 8.431753035386404
+  },
+  {
+   "epoch": 7,
+   "train_loss": 0.0719295629034242,
+   "val_mae_unmonitored_m": 0.49755827673344566,
+   "val_mae_sensors_m": 0.5489067528988847,
+   "minutes": 9.873073863983155
+  },
+  {
+   "epoch": 8,
+   "train_loss": 0.05976836183555376,
+   "val_mae_unmonitored_m": 0.427505434961812,
+   "val_mae_sensors_m": 0.4709311731323873,
+   "minutes": 11.300160149733225
+  },
+  {
+   "epoch": 9,
+   "train_loss": 0.056549471030202414,
+   "val_mae_unmonitored_m": 0.4060025903201739,
+   "val_mae_sensors_m": 0.49618905657919105,
+   "minutes": 12.648899590969085
+  },
+  {
+   "epoch": 10,
+   "train_loss": 0.0448915711288188,
+   "val_mae_unmonitored_m": 0.3741878947897314,
+   "val_mae_sensors_m": 0.4513492622850616,
+   "minutes": 13.9927463889122
+  },
+  {
+   "epoch": 11,
+   "train_loss": 0.04003664333840165,
+   "val_mae_unmonitored_m": 0.3621955567513538,
+   "val_mae_sensors_m": 0.43945320751464145,
+   "minutes": 15.316042971611022
+  },
+  {
+   "epoch": 12,
+   "train_loss": 0.0404323381762869,
+   "val_mae_unmonitored_m": 0.36380370973383,
+   "val_mae_sensors_m": 0.43789866105047986,
+   "minutes": 16.659299047787986
+  }
+ ]
+}

@@ -6,7 +6,7 @@ mean residual is taken as the estimate. Reported: distance along the pipes from 
 estimated pipe to the leaking pipe, for all 23 leaks, in every condition for which
 fields are cached by step 10.
 """
-import importlib, json
+import importlib, json, os
 import numpy as np
 import pandas as pd
 import torch
@@ -16,6 +16,7 @@ from common import *
 
 rb = importlib.import_module("12_robustness")
 MODELS, RES = ROOT / "models", ROOT / "results"
+SET = os.environ.get("GNN_SET", "hide")
 J = rb.J; JN = [g.NODES[i] for i in J]
 NODE_PIPE = {}
 for name, l in scoring._wn.links():
@@ -33,7 +34,7 @@ def rows_all(run):
 def mlp_net(tag):
     net = torch.nn.Sequential(torch.nn.Linear(71, 128), torch.nn.ReLU(), torch.nn.Linear(128, 128), torch.nn.ReLU(),
                               torch.nn.Linear(128, 128), torch.nn.ReLU(), torch.nn.Linear(128, len(J)))
-    net.load_state_dict(torch.load(MODELS / f"mlp_{tag}.pt")); return net.eval()
+    net.load_state_dict(torch.load(MODELS / f"mlp_{tag.replace('_tuned', '_hide')}.pt")); return net.eval()
 
 
 def fields(tag, train_regime, test_name, dead=None):
@@ -114,12 +115,12 @@ def localise(z, test, test_name):
     return res
 
 
-CASES = [("E1 continuous", "cws_hide", "CWS", "continuous_CWS_leaks", None),
-         ("E3 S48", "s48_hide", "S48", "intermittent_S48_leaks", None),
-         ("S24 unseen", "s48_hide", "S48", "intermittent_S24_leaks", None),
-         ("S72 unseen", "s48_hide", "S48", "intermittent_S72_leaks", None),
-         ("S48, 6 sensors failed", "s48_hide", "S48", "intermittent_S48_leaks", 6),
-         ("Continuous, 6 sensors failed", "cws_hide", "CWS", "continuous_CWS_leaks", 6)]
+CASES = [("E1 continuous", f"cws_{SET}", "CWS", "continuous_CWS_leaks", None),
+         ("E3 S48", f"s48_{SET}", "S48", "intermittent_S48_leaks", None),
+         ("S24 unseen", f"s48_{SET}", "S48", "intermittent_S24_leaks", None),
+         ("S72 unseen", f"s48_{SET}", "S48", "intermittent_S72_leaks", None),
+         ("S48, 6 sensors failed", f"s48_{SET}", "S48", "intermittent_S48_leaks", 6),
+         ("Continuous, 6 sensors failed", f"cws_{SET}", "CWS", "continuous_CWS_leaks", 6)]
 summary, detail = {}, {}
 for label, tag, regime, test_name, drop in CASES:
     dead = None
@@ -133,4 +134,4 @@ for label, tag, regime, test_name, drop in CASES:
                               peak_median_m=float(np.median([r["nearest_peak_m"] for r in v])),
                               peak_within_300=int(sum(r["nearest_peak_m"] <= 300 for r in v))) for m, v in res.items()}
     print(label, json.dumps(summary[label]), flush=True)
-(RES / f"localisation_{WINDOW}.json").write_text(json.dumps(dict(summary=summary, detail=detail), indent=1))
+(RES / f"localisation_{WINDOW}{'' if SET == 'hide' else '_' + SET}.json").write_text(json.dumps(dict(summary=summary, detail=detail), indent=1))
