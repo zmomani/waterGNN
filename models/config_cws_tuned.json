@@ -1,0 +1,1 @@
+{"in_channels": 11, "hidden": 128, "layers": 4, "order": 10, "embed": 64, "lr": 0.002, "wd": 0.0, "epochs": 36}
