@@ -50,7 +50,7 @@ for key, _ in CASES:
         det[key] = load(f"detection_{key}")
 fig, axs = plt.subplots(1, 2, figsize=(7.4, 2.7), gridspec_kw=dict(wspace=0.25))
 x = np.arange(len(CASES)); LOW = -100
-for ax, field, title in [(axs[0], "relative", "(a) Score, % of maximum"), (axs[1], "FP", "(b) False alarms")]:
+for ax, field, title in [(axs[0], "relative", "(a) Score (saving), % of maximum"), (axs[1], "FP", "(b) False alarms")]:
     for i, m in enumerate(("GNN", "Ridge", "MLP")):
         v = np.array([det[k][m]["test_2019"][field] for k, _ in CASES]) * (100 if field == "relative" else 1)
         shown = np.maximum(v, LOW) if field == "relative" else v

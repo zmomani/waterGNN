@@ -85,7 +85,7 @@ for i, m in enumerate(MODELS):
     for xi, vi, si in zip(x + (i - 1) * 0.27, v, s):
         ax.text(xi, si + (2 if si >= 0 else -2), f"{vi:.0f}", ha="center", va="bottom" if si >= 0 else "top", fontsize=5, color=INK)
 ax.axhline(0, color=MUTED, lw=0.8); ax.set_xticks(x, [SHORT[lab] for _, _, lab in CASES], fontsize=5.6); ax.grid(axis="x", visible=False)
-ax.set_ylim(LOW - 15, 65); ax.set_ylabel("score, % of maximum"); ax.set_title("(c) Detection (2019 test year)")
+ax.set_ylim(LOW - 15, 65); ax.set_ylabel("score (saving), % of maximum"); ax.set_title("(c) Detection (2019 test year)")
 ax.axvline(4.5, color=GRID, lw=1)
 
 # (d) localisation ---------------------------------------------------------------------------

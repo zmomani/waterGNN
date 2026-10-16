@@ -19,7 +19,7 @@ EXP = [("E1_nodes", "E1\ncontin.\nsupply"), ("E2", "E2\ntransfer"),
 R = {k: json.loads((RES / f"detection_{k}.json").read_text()) for k, _ in EXP}
 fig, axs = plt.subplots(1, 3, figsize=(7.4, 2.7), gridspec_kw=dict(wspace=0.42))
 x = np.arange(len(EXP))
-for ax, key, title, fmt in [(axs[0], "relative", "(a) Score, % of maximum", "{:.0f}"),
+for ax, key, title, fmt in [(axs[0], "relative", "(a) Score (saving), % of maximum", "{:.0f}"),
                             (axs[1], "TP", "(b) Leaks found, of 23", "{:.0f}"),
                             (axs[2], "FP", "(c) False alarms", "{:.0f}")]:
     for i, (m, c) in enumerate([("GNN", BLUE), ("Ridge", ORANGE)]):
