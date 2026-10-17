@@ -15,7 +15,14 @@ plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8, "axes.edgecol
                      "axes.titlesize": 8.5, "axes.titleweight": "bold", "axes.titlelocation": "left",
                      "legend.frameon": False, "figure.dpi": 200, "savefig.bbox": "tight"})
 load = lambda n: json.loads((RES / f"{n}.json").read_text())
-sens, sched, mlp = load("robustness_sensors"), load("robustness_schedule"), load("robustness_mlp")
+import os
+SET = os.environ.get("GNN_SET", "hide"); SFX = "" if SET == "hide" else "_" + SET
+sens, sched, mlp = load("robustness_sensors" + SFX), load("robustness_schedule" + SFX), load("robustness_mlp")
+if SET != "hide":                                   # refitted ridge only exists in the original file
+    _o = load("robustness_sensors")
+    for r in sens:
+        for k in sens[r]:
+            sens[r][k]["Ridge_refitted"] = _o[r][k]["Ridge_refitted"]
 
 # ---------------------------------------------------------------- reconstruction
 fig, axs = plt.subplots(1, 3, figsize=(7.6, 2.6), gridspec_kw=dict(wspace=0.42))
@@ -37,7 +44,8 @@ for i, m in enumerate(("GNN", "Ridge", "MLP")):
         ax.text(xi, v * 1.12, f"{v:.2f}", ha="center", va="bottom", fontsize=5.5, color=INK)
 ax.set_yscale("log"); ax.set_xticks(x, ["S24\n(unseen)", "S48\n(trained)", "S72\n(unseen)"]); ax.grid(axis="x", visible=False)
 ax.set_title("(c) Schedule changes"); ax.margins(y=0.2)
-fig.savefig(RES / "fig_robust_reconstruction.pdf"); fig.savefig(RES / "fig_robust_reconstruction.png")
+fig.savefig(RES / f"fig_robust_reconstruction{SFX}.pdf"); fig.savefig(RES / f"fig_robust_reconstruction{SFX}.png")
+if SET != "hide": raise SystemExit
 
 # --------------------------------------------------------------------- detection
 CASES = [("E3_blind", "S48\nas trained"), ("R_S24_blind", "S24\nunseen"), ("R_S72_blind", "S72\nunseen"),

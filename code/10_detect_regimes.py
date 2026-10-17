@@ -25,6 +25,9 @@ ap.add_argument("--aware", action="store_true")
 ap.add_argument("--every", type=int, default=12)
 ap.add_argument("--drop", type=int, default=0, help="number of sensors that have failed in the test year")
 ap.add_argument("--drop-seed", type=int, default=0)
+ap.add_argument("--residual", default="hidden", choices=["hidden", "normal"],
+                help="hidden: expected (one sensor group hidden) minus reference (all sensors); "
+                     "normal: hour-of-week normal of each node minus reconstruction from all sensors")
 ap.add_argument("--wide", action="store_true", help="wider grid of detector settings")
 ap.add_argument("--only", default="", help="run one model only (GNN, Ridge or MLP) and add it to the existing results")
 args = ap.parse_args()
@@ -58,6 +61,39 @@ def field_gnn(run):
                 print(run["name"], i, "/", len(run["time"]), flush=True)
     np.save(cache, out)
     return out
+
+
+def recon_gnn(run):
+    """Reconstruction from all working sensors, standardised units, at junctions."""
+    sfx = f"_drop{args.drop}s{args.drop_seed}" if "dead" in run else ""
+    cache = MODELS / f"recon_{args.tag}_{run['name']}_{args.every}{sfx}.npy"
+    if cache.exists():
+        return np.load(cache)
+    out = np.zeros((len(run["time"]), len(J)), np.float32)
+    with torch.no_grad():
+        for i in range(0, len(run["time"]), 64):
+            sub = {k: run[k][i:i + 64] for k in KEYS}
+            if "dead" in run:
+                sub["dead"] = run["dead"]
+            out[i:i + 64] = model(torch.tensor(g.node_features(sub, MU, SD, args.aware)))[:, J].numpy()
+    np.save(cache, out)
+    return out
+
+
+HOW = None
+
+
+def normal_field(tr):
+    """Each junction's normal pressure for every hour of the week, from the training period: the mean of
+    the model's own reconstruction over pressurised steps. Returned as a function of a run."""
+    def how(t):
+        return (t.dayofweek * 24 + t.hour).to_numpy()
+    rec = tr["recon"]; L = tr["live"][:, J]; h = how(tr["time"])
+    N = np.zeros((168, len(J)), np.float32)
+    for k in range(168):
+        m = h == k; n = np.maximum((L[m]).sum(0), 1)
+        N[k] = (rec[m] * L[m]).sum(0) / n
+    return lambda run: N[how(run["time"])]
 
 
 def flat(run, keep):
@@ -161,6 +197,14 @@ todo = [args.only] if args.only else ["GNN", "Ridge"]
 maps = fit_ridge(train) if "Ridge" in todo else None
 net = fit_mlp(train) if "MLP" in todo else None
 FIELD = dict(GNN=field_gnn, Ridge=lambda r: field_ridge(r, maps), MLP=lambda r: field_mlp(r, net))
+if args.residual == "normal":
+    RECON = dict(GNN=recon_gnn, Ridge=lambda r: (flat(r, maps[0][0]) @ maps[0][1]).astype(np.float32),
+                 MLP=lambda r: net(mlp_in(r)).detach().numpy())
+    NORMAL = {}
+    for m in todo:
+        tr = dict(train, recon=RECON[m](dict(train, name=ref["name"] + "_train")) if m != "GNN" else recon_gnn(ref)[warm:split])
+        NORMAL[m] = normal_field(tr)
+    FIELD = {m: (lambda r, m=m: NORMAL[m](r) - RECON[m](r)) for m in todo}
 
 results, series = {}, {}
 for mname, field in [(m, FIELD[m]) for m in todo]:
