@@ -30,11 +30,22 @@ def how(t):
     return (t.dayofweek * 24 + t.hour).to_numpy()
 
 
-def z_fields(tag, run_prefix):
+def z_fields(tag, run_prefix, model="GNN"):
     """Standardised normal residual at junctions for the leak runs of 2018 and 2019."""
     MU, SD = (lambda z: (z["mu"], z["sd"]))(np.load(MODELS / f"norm_{tag}.npz"))
     ref = g.load_run(f"{run_prefix}_noleak", 2018, every=12)
-    rec = np.load(MODELS / f"recon_{tag}_{run_prefix}_noleak_2018_12.npy")
+    if model == "Ridge":                                         # same inputs and map as the detector's baseline
+        import importlib; rb = importlib.import_module("12_robustness")
+        tr = rb.train_rows(ref)
+        A = rb.flat(ref, tr, np.arange(33), MU, SD, False); Y = ((ref["truth"][tr] - MU) / SD)[:, J]; L0 = ref["live"][tr][:, J]
+        W = np.zeros((A.shape[1], len(J)))
+        for grp in np.unique(rb.GROUP_OF):
+            cols = np.flatnonzero(rb.GROUP_OF == grp); Ar = A[L0[:, cols[0]]]
+            W[:, cols] = np.linalg.solve(Ar.T @ Ar + 1e-3 * np.eye(A.shape[1]), Ar.T @ Y[L0[:, cols[0]]][:, cols])
+        recon = lambda run: (rb.flat(run, np.arange(len(run["time"])), np.arange(33), MU, SD, False) @ W).astype(np.float32)
+        rec = recon(ref)
+    else:
+        rec = np.load(MODELS / f"recon_{tag}_{run_prefix}_noleak_2018_12.npy")
     warm = int(np.searchsorted(ref["time"], np.datetime64("2018-01-29")))
     split = int(np.searchsorted(ref["time"], np.datetime64("2018-11-01")))
     L = ref["live"][:, J]; h = how(ref["time"])
@@ -48,7 +59,7 @@ def z_fields(tag, run_prefix):
     out = {}
     for year in (2018, 2019):
         run = g.load_run(f"{run_prefix}_leaks", year, every=12)
-        r = np.load(MODELS / f"recon_{tag}_{run_prefix}_leaks_{year}_12.npy")
+        r = recon(run) if model == "Ridge" else np.load(MODELS / f"recon_{tag}_{run_prefix}_leaks_{year}_12.npy")
         z = np.where(run["live"][:, J], np.clip((N[how(run["time"])] - r - mu) / sd, -50, 50), 0.0)
         out[year] = dict(z=z.astype(np.float32), live=run["live"][:, J], time=run["time"])
     return out
@@ -103,8 +114,8 @@ def anomalies(run_prefix, year):
     return rows
 
 
-def run(tag, run_prefix, name):
-    fld = z_fields(tag, run_prefix)
+def run(tag, run_prefix, name, model="GNN"):
+    fld = z_fields(tag, run_prefix, model)
     sets = {}
     for year in (2018, 2019):
         rows = anomalies(run_prefix, year)
@@ -138,3 +149,5 @@ def run(tag, run_prefix, name):
 if __name__ == "__main__":
     run("s48_tuned", "intermittent_S48", "S48_tuned")
     run("cws_tuned", "continuous_CWS", "CWS_tuned")
+    run("s48_tuned", "intermittent_S48", "S48_ridge", "Ridge")
+    run("cws_tuned", "continuous_CWS", "CWS_ridge", "Ridge")
